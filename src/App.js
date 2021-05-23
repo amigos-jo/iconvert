@@ -23,6 +23,8 @@ export class App extends Component {
     return (
       <div>
         <Router>
+        <Header />
+          <Banner className='bannerEn ' />
           <Switch>
             <Route exact path="/aboutUs">
               <AboutUs />
@@ -34,8 +36,7 @@ export class App extends Component {
           <HomeBack />
           <ExchangeForm />
           <MyChart />
-          <Header />
-          <Banner />
+      
         </Router>
 
       </div>

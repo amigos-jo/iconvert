@@ -9,8 +9,8 @@ import Logo from '../assets/logo.png';
 export default class Header extends Component {
   render() {
     return (
-      <div>
-        <Navbar className='headerColor'  >
+      <div className='headerEn'>
+        <Navbar className='headerColor'   >
           <img src={Logo} alt='logo' className='logo' />
 
           <Nav className="mr-auto items">
