@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -144,4 +144,57 @@ span{
   letter-spacing: 1px;
   color: #1a1919 !important;
   /* font-weight: bolder; */
+}
+.bg {
+  background-image: url("./assets/img/blue-background-4863452_1280.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+}
+
+.convForm {
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  margin: 50px auto;
+}
+
+.btnForm {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+}
+.lableForm {
+  font-size: 1.2em;
+}
+
+.inputForm {
+  height: 50px;
+}
+
+.pull-right {
+  text-align: right;
+}
+
+.bgText {
+  padding-top: 200px ;
+  color: white;
+}
+.test {
+  display: block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+
+  margin-top: 30px;
+  margin-right: 0px;
+  margin-left: 25px;
+}
+.test2{
+  margin: 0px 0px;
+}
+#root > div > form > div.row > div:nth-child(3){
+  text-align: center;
 }

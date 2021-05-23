@@ -4,6 +4,11 @@ import TableHome from './components/TableHome'
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs'
+import React, { Component } from 'react';
+import HomeBack from './components/HomeBack';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ExchangeForm from './components/ExchangeForm';
+import MyChart from './components/Chart';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,16 +21,22 @@ export class App extends Component {
     return (
       <div>
         <Router>
-        <Switch>
-          <Route exact path="/aboutUs">
-          <AboutUs />
-          </Route>
-        </Switch>
-        <TableHome/>
-        <Home/>
-        <CardsHome/>
+          <Switch>
+            <Route exact path="/aboutUs">
+              <AboutUs />
+            </Route>
+          </Switch>
+          <TableHome />
+          <Home />
+          <CardsHome />
+          <HomeBack />
+          <ExchangeForm />
+          <MyChart />
         </Router>
+
       </div>
+
+
     )
   }
 }
