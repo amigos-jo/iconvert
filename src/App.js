@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import CardsHome from './components/CardsHome'
 import TableHome from './components/TableHome'
+import Header from './components/Header';
+import Banner from './components/Banner';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs'
@@ -20,6 +23,8 @@ export class App extends Component {
     return (
       <div>
         <Router>
+        <Header />
+          <Banner className='bannerEn ' />
           <Switch>
             <Route exact path="/aboutUs">
               <AboutUs />
@@ -31,6 +36,7 @@ export class App extends Component {
           <HomeBack />
           <ExchangeForm />
           <MyChart />
+      
         </Router>
 
       </div>
