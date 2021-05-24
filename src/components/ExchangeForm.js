@@ -91,38 +91,45 @@ export class ExchangeForm extends Component {
 
 
 
-                                    < option onFocus value={this.state.second.value}>{this.state.second.type}</option>
                                     {array1.map(element => {
-
-                                        return (
-                                            <option value={element.value}>{element.type}</option>
-                                        )
+                                        if (this.state.first.value === element.value) {
+                                           return <option selected value={element.value}>{element.type}</option>
+                                        }
+                                        else {
+                                            return (
+                                                <option value={element.value}>{element.type}</option>
+                                            )
+                                        }
                                     })}
                                 </Form.Control>
                             </Form.Group>
                         </Col>
                         <Col>
-                        <div className='editButtonForm'>
-                        <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
-                        </div>
-                          
+                            <div className='editButtonForm'>
+                                <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
+                            </div>
+
                         </Col>
 
                         <Col>
                             <Form.Group className='test2' >
                                 <Form.Label className='lableForm'>To</Form.Label>
                                 <Form.Control as="select" className='inputForm' onChange={(e) => this.toChange(e)}>
-                                    <option value={this.state.first.value}>{this.state.first.type}</option>
 
                                     {array1.map(element => {
+                                       if (this.state.second.value === element.value) {
+                                        return  <option selected value={element.value}>{element.type}</option>
+                                    }
+                                    else {
                                         return (
                                             <option value={element.value}>{element.type}</option>
                                         )
+                                    }
                                     })}
                                 </Form.Control>
                             </Form.Group>
                         </Col>
-                        
+
                     </Row>
                     <div className='pull-right'>
                         <Button variant="outline-primary " className='btnForm rounded ' >Convert</Button>
