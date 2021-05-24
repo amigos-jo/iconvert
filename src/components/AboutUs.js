@@ -13,6 +13,14 @@ export class Test extends Component {
     render() {
         return (
             <div>
+                <div className="class my-5">
+                    <h2 >Our Team</h2>
+                </div>
+                <div className='justify-content-center'>
+                    <p className="paragraphEdit mt-4 ">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
+                </div>
+
                 <div id="cards_landscape_wrap-2">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -158,11 +166,11 @@ export class Test extends Component {
                         </div>
                     </div>
                 </div>
- 
+
             </div >
- 
-             
- 
+
+
+
         )
     }
 }

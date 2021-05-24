@@ -102,7 +102,10 @@ export class ExchangeForm extends Component {
                             </Form.Group>
                         </Col>
                         <Col>
-                            <Button className='test rounded-circle'><AiOutlineSwap size='1.5em' onClick={this.changeButton} /></Button>
+                        <div className='editButtonForm'>
+                        <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
+                        </div>
+                          
                         </Col>
 
                         <Col>
@@ -119,11 +122,10 @@ export class ExchangeForm extends Component {
                                 </Form.Control>
                             </Form.Group>
                         </Col>
-
-
+                        
                     </Row>
                     <div className='pull-right'>
-                        <Button variant="primary" className='btnForm rounded' >Submit</Button>
+                        <Button variant="outline-primary " className='btnForm rounded ' >Convert</Button>
                     </div>
                 </Form>
 
