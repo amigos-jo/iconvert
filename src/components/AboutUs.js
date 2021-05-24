@@ -13,9 +13,6 @@ export class Test extends Component {
     render() {
         return (
             <div>
-<<<<<<< HEAD
-
-=======
                 <div id="cards_landscape_wrap-2">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -161,7 +158,6 @@ export class Test extends Component {
                         </div>
                     </div>
                 </div>
->>>>>>> 68d9d28bb59db377a7f4b77385fe5c11487e54c5
             </div>
         )
     }
