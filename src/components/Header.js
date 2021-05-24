@@ -4,22 +4,36 @@ import Nav from 'react-bootstrap/Nav';
 // import Form from 'react-bootstrap/Form';
 // import Button from 'react-bootstrap/Button';
 import Logo from '../assets/logo.png';
+// import Footer from './Footer';
+import { withAuth0 } from '@auth0/auth0-react';
+import Login from './Login';
+import Logout from './Logout'
 
 
-export default class Header extends Component {
+
+class Header extends Component {
   render() {
     return (
-      <div className='headerEn'>
-        <Navbar className='headerColor'   >
+      <div className='headerEn justify-content-end'>
+        <Navbar className='headerColor  ' sticky="bottom" >
           <img src={Logo} alt='logo' className='logo' />
+          <Navbar.Collapse className="justify-content-end p-5">
+          <Nav>
+              <Nav.Link className="item" href="/">Home</Nav.Link>
+              <Nav.Link className="item" href="/aboutUs">About us</Nav.Link>
+              <Nav.Link className="item" href='/' >Contact us</Nav.Link>
+              {this.props.auth0.isAuthenticated &&
+                <>
+                  <Nav.Link className="item" href='/profile' >Profile</Nav.Link>
+                  <Logout />
+                </>
+              }
+            </Nav>
+          </Navbar.Collapse>
+         
+            <Login />
+         
 
-          <Nav className="mr-auto items">
-            <Nav.Link className="item" href="#home">Home</Nav.Link>
-            <Nav.Link className="item" href="#features">About us</Nav.Link>
-            <Nav.Link className="item" href="#pricing">Contact us</Nav.Link>
-
-          </Nav>
-          <button type="button" className="editButton btn btn-outline-primary ">Log in</button>
         </Navbar>
 
       </div>
@@ -27,4 +41,4 @@ export default class Header extends Component {
   }
 }
 
-
+export default withAuth0(Header);
