@@ -1,163 +1,186 @@
-// // import React from 'react';
-// // import '@fortawesome/fontawesome-free/css/all.min.css';
-// // import 'bootstrap-css-only/css/bootstrap.min.css';
-// // import 'mdbreact/dist/css/mdb.css';
-// // import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+// import React, { Component } from 'react';
+
+// export default class Footer extends Component {
+//     render() {
+//         return (
+//             <div>
+
+//                 {/* <!-- Remove the container if you want to extend the Footer to full width. --> */}
+//                 {/* <div class="container my-5"> */}
+
+//                 <footer className="text-center text-lg-start footer-color" >
+//                     <div className="container d-flex justify-content-center py-5">
+//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon1-color"  >
+//                             <i className="fab fa-facebook-f"></i>
+//                         </button>
+//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon2-color"  >
+//                             <i className="fab fa-youtube"></i>
+//                         </button>
+//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon3-color"  >
+//                             <i className="fab fa-instagram"></i>
+//                         </button>
+//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon4-color"  >
+//                             <i className="fab fa-twitter"></i>
+//                         </button>
+//                     </div>
 
 
-// // class FooterPagePro extends React.Component {
-// //     render() {
-// //         return (
-// //             <MDBFooter color="unique-color-dark" className="page-footer font-small pt-0">
-// //                 <div style={{ backgroundColor: "#6351ce" }}>
-// //                     <MDBContainer fluid className="text-center text-md-left">
-// //                         <MDBRow className="py-4 d-flex align-items-center">
-// //                             <MDBCol md="6" lg="5" className="text-center text-md-left mb-4 mb-md-0">
-// //                                 <h6 className="mb-0 white-text">
-// //                                     Get connected with us on social networks!
-// //                           </h6>
-// //                             </MDBCol>
-// //                             <MDBCol md="6" lg="7" className="text-center text-md-right">
-// //                                 <a className="fb-ic ml-0">
-// //                                     <i className="fab fa-facebook-f white-text mr-lg-4"> </i>
-// //                                 </a>
-// //                                 <a className="tw-ic">
-// //                                     <i className="fab fa-twitter white-text mr-lg-4"> </i>
-// //                                 </a>
-// //                                 <a className="gplus-ic">
-// //                                     <i className="fab fa-google-plus-g white-text mr-lg-4"> </i>
-// //                                 </a>
-// //                                 <a className="li-ic">
-// //                                     <i className="fab fa-linkedin-in white-text mr-lg-4"> </i>
-// //                                 </a>
-// //                                 <a className="ins-ic">
-// //                                     <i className="fab fa-instagram white-text mr-lg-4">  </i>
-// //                                 </a>
-// //                             </MDBCol>
-// //                         </MDBRow>
-// //                     </MDBContainer>
-// //                 </div>
-// //                 <MDBContainer className="mt-5 mb-4 text-center text-md-left">
-// //                     <MDBRow className="mt-3">
-// //                         <MDBCol md="3" lg="4" xl="3" className="mb-4">
-// //                             <h6 className="text-uppercase font-weight-bold">
-// //                                 <strong>Company name</strong>
-// //                             </h6>
-// //                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
-// //                             <p>
-// //                                 Here you can use rows and columns here to organize your footer
-// //                                 content. Lorem ipsum dolor sit amet, consectetur adipisicing
-// //                                 elit.
-// //                         </p>
-// //                         </MDBCol>
-// //                         <MDBCol md="2" lg="2" xl="2" className="mb-4">
-// //                             <h6 className="text-uppercase font-weight-bold">
-// //                                 <strong>Products</strong>
-// //                             </h6>
-// //                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
-// //                             <p>
-// //                                 <a href="#!">MDBootstrap</a>
-// //                             </p>
-// //                             <p>
-// //                                 <a href="#!">MDWordPress</a>
-// //                             </p>
-// //                             <p>
-// //                                 <a href="#!">BrandFlow</a>
-// //                             </p>
-// //                             <p>
-// //                                 <a href="#!">Bootstrap Angular</a>
-// //                             </p>
-// //                         </MDBCol>
-// //                         <MDBCol md="3" lg="2" xl="2" className="mb-4">
-// //                             <h6 className="text-uppercase font-weight-bold">
-// //                                 <strong>Useful links</strong>
-// //                             </h6>
-// //                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
-// //                             <p>
-// //                                 <a href="#!">Your Account</a>
-// //                             </p>
-// //                             <p>
-// //                                 <a href="#!">Become an Affiliate</a>
-// //                             </p>
-// //                             <p>
-// //                                 <a href="#!">Shipping Rates</a>
-// //                             </p>
-// //                             <p>
-// //                                 <a href="#!">Help</a>
-// //                             </p>
-// //                         </MDBCol>
-// //                         <MDBCol md="4" lg="3" xl="3" className="mb-4">
-// //                             <h6 className="text-uppercase font-weight-bold">
-// //                                 <strong>Contact</strong>
-// //                             </h6>
-// //                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
-// //                             <p>
-// //                                 <i className="fa fa-home mr-3" /> New York, NY 10012, US
-// //                         </p>
-// //                             <p>
-// //                                 <i className="fa fa-envelope mr-3" /> info@example.com
-// //                         </p>
-// //                             <p>
-// //                                 <i className="fa fa-phone mr-3" /> + 01 234 567 88
-// //                         </p>
-// //                             <p>
-// //                                 <i className="fa fa-print mr-3" /> + 01 234 567 89
-// //                         </p>
-// //                         </MDBCol>
-// //                     </MDBRow>
-// //                 </MDBContainer>
-// //                 <div className="footer-copyright text-center py-3">
-// //                     <MDBContainer fluid>
-// //                         &copy; {new Date().getFullYear()} Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
-// //                     </MDBContainer>
-// //                 </div>
-// //             </MDBFooter>
+//                     <div className="text-center text-white p-3 footer-text-color" >
+//                         © 2021 IconverTeam:
+//       {/* <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> */}
+//                     </div>
 
-// //         );
-// //     }
-// // }
+//                 </footer>
+
+//                 {/* </div> */}
 
 
-// // export default FooterPagePro;
-
-// import React from "react"
-
-// const Footer = () => <footer className="page-footer font-small blue pt-4">
-//     <div className="container-fluid text-center text-md-left">
-//         <div className="row">
-//             <div className="col-md-6 mt-md-0 mt-3">
-//                 <h5 className="text-uppercase">Footer Content</h5>
-//                 <p>Here you can use rows and columns to organize your footer content.</p>
 //             </div>
+//         )
+//     }
+// }
 
-//             <hr className="clearfix w-100 d-md-none pb-0" />
 
-//             <div className="col-md-3 mb-md-0 mb-3">
-//                 <h5 className="text-uppercase">Links</h5>
-//                 <ul className="list-unstyled">
-//                     <li><a href="#!">Link 1</a></li>
-//                     <li><a href="#!">Link 2</a></li>
-//                     <li><a href="#!">Link 3</a></li>
-//                     <li><a href="#!">Link 4</a></li>
-//                 </ul>
-//             </div>
+import React, { Component } from 'react';
+import { FiTwitter } from 'react-icons/fi';
 
-//             <div className="col-md-3 mb-md-0 mb-3">
-//                 <h5 className="text-uppercase">Links</h5>
-//                 <ul className="list-unstyled">
-//                     <li><a href="#!">Link 1</a></li>
-//                     <li><a href="#!">Link 2</a></li>
-//                     <li><a href="#!">Link 3</a></li>
-//                     <li><a href="#!">Link 4</a></li>
-//                 </ul>
-//             </div>
-//         </div>
-//     </div>
+export class Footer extends Component {
+    render() {
+        return (
+            <div>
 
-//     <div className="footer-copyright text-center py-3">© 2020 Copyright:
-//         <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-//     </div>
 
-// </footer>
+                <footer class="text-center text-lg-start bg-light text-muted">
+                    {/* <!-- Section: Social media --> */}
+                    <section
+                        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+                    >
+                        {/* <!-- Left --> */}
+                        <div class="me-5 d-none d-lg-block">
+                            <span>Get connected with us on social networks:</span>
+                        </div>
+                        {/* <!-- Left --> */}
 
-// export default Footer
+                        {/* <!-- Right --> */}
+                        <div>
+                            <a href="" class="me-4 text-reset">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="me-4 text-reset">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="me-4 text-reset">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="" class="me-4 text-reset">
+                                <FiTwitter size='2rem' color='red' />
+                            </a>
+                            <a href="" class="me-4 text-reset">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="" class="me-4 text-reset">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                        {/* <!-- Right --> */}
+                    </section>
+                    {/* <!-- Section: Social media --> */}
+
+                    {/* <!-- Section: Links  --> */}
+                    <section class="">
+                        <div class="container text-center text-md-start mt-5">
+                            {/* <!-- Grid row --> */}
+                            <div class="row mt-3">
+                                {/* <!-- Grid column --> */}
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                    {/* <!-- Content --> */}
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        <i class="fas fa-gem me-3"></i>Company name
+          </h6>
+                                    <p>
+                                        Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                        dolor sit amet, consectetur adipisicing elit.
+          </p>
+                                </div>
+                                {/* <!-- Grid column --> */}
+
+                                {/* <!-- Grid column --> */}
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    {/* <!-- Links --> */}
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Products
+          </h6>
+                                    <p>
+                                        <a href="#!" class="text-reset">Angular</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">React</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Vue</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Laravel</a>
+                                    </p>
+                                </div>
+                                {/* <!-- Grid column --> */}
+
+                                {/* <!-- Grid column --> */}
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                    {/* <!-- Links --> */}
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Useful links
+          </h6>
+                                    <p>
+                                        <a href="#!" class="text-reset">Pricing</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Settings</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Orders</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-reset">Help</a>
+                                    </p>
+                                </div>
+                                {/* <!-- Grid column --> */}
+
+                                {/* <!-- Grid column --> */}
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                    {/* <!-- Links --> */}
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        Contact
+          </h6>
+                                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                                    <p>
+                                        <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+                                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                                </div>
+                                {/* <!-- Grid column --> */}
+                            </div>
+                            {/* <!-- Grid row --> */}
+                        </div>
+                    </section>
+                    {/* <!-- Section: Links  --> */}
+
+                    {/* <!-- Copyright --> */}
+                    <div class="text-center p-4"
+                    //  style="background-color: rgba(0, 0, 0, 0.05);"
+                    > © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    </div>
+                    {/* <!-- Copyright --> */}
+                </footer>
+                {/* <!-- Footer -->  */}
+            </div>
+        )
+    }
+}
+
+export default Footer
+

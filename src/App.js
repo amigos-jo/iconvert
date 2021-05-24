@@ -3,6 +3,7 @@ import CardsHome from './components/CardsHome'
 import TableHome from './components/TableHome'
 import Header from './components/Header';
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './components/Home';
@@ -26,26 +27,28 @@ export class App extends Component {
           <Header />
           <Banner className='bannerEn ' />
           <Switch>
- 
-            <Route exact path="/">
-            <TableHome />
- 
-          <Home />
-          <CardsHome />
-          <HomeBack />
-          <ExchangeForm />
-          <MyChart />
- 
 
- 
+            <Route exact path="/">
+              <TableHome />
+
+              <Home />
+              <CardsHome />
+              <HomeBack />
+              <ExchangeForm />
+              <MyChart />
+
+
+
             </Route>
             <Route exact path="/aboutUs">
               <AboutUs />
             </Route>
           </Switch>
-      
-      
- 
+
+          <Footer />
+
+f
+
         </Router>
 
       </div>

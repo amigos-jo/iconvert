@@ -269,9 +269,9 @@ background-color: white;
   font-family: 'Lato', sans-serif;
   font-size:  1.25rem;
   font-weight: bolder; 
-  
- 
+
 }
+
 .mr-auto * { 
   margin: 4rem .25rem 4rem .25rem ;
 }
@@ -289,14 +289,8 @@ background-color: white;
 .btn-outline-primary {
  
   margin-right: 2rem;
-  
-
-
- 
- 
  
 }
-
  
 .w-100 {
   /* FONT-VARIANT: JIS04; */
@@ -354,4 +348,27 @@ transition-duration: 0.02s;
   z-index: 99;
   
 
+}
+
+.footer-color {
+  background-color: #db6930;
+}
+.footer-icon1-color {
+  background-color: #54456b;
+}
+.footer-icon2-color {
+  background-color: #54456b;
+}
+.footer-icon3-color {
+  background-color: #54456b; 
+}
+.footer-icon3-color {
+background-color: #54456b;
+}
+.footer-text-color {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.btn-floating.btn-lg .fab, .btn-floating.btn-lg .far, .btn-floating.btn-lg .fas, .btn-group-lg>.btn-floating.btn .fab, .btn-group-lg>.btn-floating.btn .far, .btn-group-lg>.btn-floating.btn .fas {
+  width: 0.8125rem;
+  line-height: 2.8125rem;
 }
