@@ -1,186 +1,75 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-// import React, { Component } from 'react';
-
-// export default class Footer extends Component {
-//     render() {
-//         return (
-//             <div>
-
-//                 {/* <!-- Remove the container if you want to extend the Footer to full width. --> */}
-//                 {/* <div class="container my-5"> */}
-
-//                 <footer className="text-center text-lg-start footer-color" >
-//                     <div className="container d-flex justify-content-center py-5">
-//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon1-color"  >
-//                             <i className="fab fa-facebook-f"></i>
-//                         </button>
-//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon2-color"  >
-//                             <i className="fab fa-youtube"></i>
-//                         </button>
-//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon3-color"  >
-//                             <i className="fab fa-instagram"></i>
-//                         </button>
-//                         <button type="button" className="btn btn-primary btn-lg btn-floating mx-2 footer-icon4-color"  >
-//                             <i className="fab fa-twitter"></i>
-//                         </button>
-//                     </div>
-
-
-//                     <div className="text-center text-white p-3 footer-text-color" >
-//                         © 2021 IconverTeam:
-//       {/* <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a> */}
-//                     </div>
-
-//                 </footer>
-
-//                 {/* </div> */}
-
-
-//             </div>
-//         )
-//     }
-// }
-
-
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Col, Row } from 'reactstrap';
 import { FiTwitter } from 'react-icons/fi';
+import { FaFacebookF } from 'react-icons/fa';
+import { GrInstagram } from 'react-icons/gr';
+import { AiFillGithub } from 'react-icons/ai';
 
-export class Footer extends Component {
+export default class Footer extends Component {
     render() {
         return (
+
             <div>
+                <footer class="text-center text-lg-start  dim-footer footer-height'  ">
 
-
-                <footer class="text-center text-lg-start bg-light text-muted">
-                    {/* <!-- Section: Social media --> */}
-                    <section
-                        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-                    >
-                        {/* <!-- Left --> */}
-                        <div class="me-5 d-none d-lg-block">
-                            <span>Get connected with us on social networks:</span>
-                        </div>
-                        {/* <!-- Left --> */}
-
-                        {/* <!-- Right --> */}
-                        <div>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <FiTwitter size='2rem' color='red' />
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        {/* <!-- Right --> */}
-                    </section>
-                    {/* <!-- Section: Social media --> */}
-
-                    {/* <!-- Section: Links  --> */}
                     <section class="">
                         <div class="container text-center text-md-start mt-5">
-                            {/* <!-- Grid row --> */}
-                            <div class="row mt-3">
-                                {/* <!-- Grid column --> */}
-                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                    {/* <!-- Content --> */}
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        <i class="fas fa-gem me-3"></i>Company name
+                            <div class="row mt-3 ">
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 div-icons footer-height">
+
+                                    <h6 class="mb-4  ">
+                                        <i class="fas fa-gem me-3 "></i>Get connected with us on social networks:
           </h6>
                                     <p>
-                                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                        dolor sit amet, consectetur adipisicing elit.
-          </p>
-                                </div>
-                                {/* <!-- Grid column --> */}
+                                        <a href="/" className="me-4 text-reset footer-icon-position ">
+                                            <FaFacebookF size='1.5rem' />
+                                        </a >
 
-                                {/* <!-- Grid column --> */}
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    {/* <!-- Links --> */}
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Products
-          </h6>
-                                    <p>
-                                        <a href="#!" class="text-reset">Angular</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">React</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Vue</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Laravel</a>
-                                    </p>
-                                </div>
-                                {/* <!-- Grid column --> */}
+                                        <a href="/" className="me-4 text-reset footer-icon-position ">
+                                            <GrInstagram size='1.5rem' />
+                                        </a>
 
-                                {/* <!-- Grid column --> */}
-                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    {/* <!-- Links --> */}
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Useful links
-          </h6>
-                                    <p>
-                                        <a href="#!" class="text-reset">Pricing</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Settings</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Orders</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Help</a>
-                                    </p>
-                                </div>
-                                {/* <!-- Grid column --> */}
+                                        <a href="/" className="me-4 text-reset  footer-icon-position  ">
+                                            <AiFillGithub size='1.7rem' />
+                                        </a>
 
-                                {/* <!-- Grid column --> */}
-                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                    {/* <!-- Links --> */}
-                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        <a href="/" className="me-4 text-reset footer-icon-position ">
+                                            <FiTwitter size='1.5rem' />
+                                        </a>
+
+                                    </p >
+                                </div >
+
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4  ">
+
+                                    <h6 class=" mb-4">
                                         Contact
           </h6>
                                     <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
                                     <p>
                                         <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            Convert@gmail.com
           </p>
-                                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-                                </div>
-                                {/* <!-- Grid column --> */}
-                            </div>
-                            {/* <!-- Grid row --> */}
-                        </div>
-                    </section>
-                    {/* <!-- Section: Links  --> */}
+                                    <p><i class="fas fa-phone me-3"></i> + 00962 795554444</p>
 
-                    {/* <!-- Copyright --> */}
-                    <div class="text-center p-4"
-                    //  style="background-color: rgba(0, 0, 0, 0.05);"
-                    > © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-                    </div>
-                    {/* <!-- Copyright --> */}
-                </footer>
-                {/* <!-- Footer -->  */}
-            </div>
-        )
+                                </div>
+
+                            </div >
+
+                        </div >
+                    </section >
+
+
+
+                    <div class="text-center p-4 footer-height"  >
+                        <hr width={'50%'} className='hrdim' />
+                        © 2021 iConverTeam
+                     </div>
+
+                </footer >
+
+            </div >
+
+        );
     }
 }
-
-export default Footer
-
