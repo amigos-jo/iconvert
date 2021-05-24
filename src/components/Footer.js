@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import { Col, Row } from 'reactstrap';
 import { FiTwitter } from 'react-icons/fi';
 import { FaFacebookF } from 'react-icons/fa';
@@ -73,3 +74,4 @@ export default class Footer extends Component {
         );
     }
 }
+

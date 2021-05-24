@@ -15,7 +15,7 @@ export class Banner extends Component {
 
 
                 <Carousel fade>
-                    <Carousel.Item interval={700}>
+                    <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
                             src={A}
@@ -26,7 +26,7 @@ export class Banner extends Component {
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item interval={700}>
+                    <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
                             src={B}
@@ -38,7 +38,7 @@ export class Banner extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item interval={700}>
+                    <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
                             src={C}
@@ -50,7 +50,7 @@ export class Banner extends Component {
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
+                    <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
                             src={D}
@@ -63,7 +63,7 @@ export class Banner extends Component {
                         </Carousel.Caption>
 
                     </Carousel.Item>
-                    <Carousel.Item>
+                    <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
                             src={E}
@@ -77,7 +77,7 @@ export class Banner extends Component {
 
 
                     </Carousel.Item>
-                    <Carousel.Item>
+                    <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
                             src={F}
