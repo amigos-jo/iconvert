@@ -201,6 +201,7 @@ span {
 /* background-color: #f0ebcc; */
 /* background-color: whitesmoke; */
 background-color: white;
+ 
 }
 .navbar {
   height: 4.5rem;
@@ -227,8 +228,7 @@ background-color: white;
 }
 .logo {
   margin : 4.5rem 1.2rem 4rem 1.2rem;
-  
-   
+ 
 }
 
 .items .item {
@@ -245,9 +245,11 @@ background-color: white;
   color: #3d84b8;
   /* border: solid var(--main-color) 1px; */
 
+ 
   position: relative;
   font-family: 'Lato', sans-serif; 
   
+ 
   
 }
 
@@ -268,6 +270,7 @@ background-color: white;
   font-size:  1.25rem;
   font-weight: bolder; 
   
+ 
 }
 .mr-auto * { 
   margin: 4rem .25rem 4rem .25rem ;
@@ -287,9 +290,13 @@ background-color: white;
  
   margin-right: 2rem;
   
-}
+
 
  
+ 
+ 
+}
+
  
 .w-100 {
   /* FONT-VARIANT: JIS04; */
