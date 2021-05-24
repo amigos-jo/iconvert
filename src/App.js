@@ -23,12 +23,12 @@ export class App extends Component {
     return (
       <div>
         <Router>
-        <Header />
+          <Header />
           <Banner className='bannerEn ' />
           <Switch>
-            <Route exact path="/aboutUs">
+            {/* <Route exact path="/aboutUs">
               <AboutUs />
-            </Route>
+            </Route> */}
           </Switch>
           <TableHome />
           <Home />
@@ -36,7 +36,7 @@ export class App extends Component {
           <HomeBack />
           <ExchangeForm />
           <MyChart />
-      
+
         </Router>
 
       </div>
