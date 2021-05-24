@@ -18,7 +18,8 @@ import {
 } from "react-router-dom";
 import CardContainer from './components/CardContainer';
 import { withAuth0 } from '@auth0/auth0-react';
-import Footer from './components/Footer';
+import ExchangeForm from './components/ExchangeForm';
+import MyChart from './components/Chart';
 
 
 export class App extends Component {
@@ -31,23 +32,12 @@ export class App extends Component {
           <Banner className='bannerEn ' />
           <Switch>
             <Route exact path="/">
- 
-              <ExchangeForm />
-              <MyChart />
-              <TableHome />
-              <HomeBack />
-              <CardsHome />
-            </Route>
-            {/*  
-          <Home /> */}
- 
             <CardContainer />
-            {/* <Test/> */}
              <TableHome />
             <Home />
             <CardsHome/> 
             </Route>
- 
+
             <Route exact path="/aboutUs">
               <AboutUs /> 
             </Route>

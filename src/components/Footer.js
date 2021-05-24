@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import { Col, Row } from 'reactstrap';
 import { FiTwitter } from 'react-icons/fi';
 import { FaFacebookF } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
