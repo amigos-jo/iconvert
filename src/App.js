@@ -33,8 +33,6 @@ export class App extends Component {
             <HomeBack />
             <CardsHome />
             </Route>
-{/*  
-          <Home /> */}
             <Route exact path="/aboutUs">
               <AboutUs />
             </Route>
