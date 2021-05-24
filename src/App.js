@@ -26,16 +26,19 @@ export class App extends Component {
         <Header />
           <Banner className='bannerEn ' />
           <Switch>
-            <Route exact path="/aboutUs">
-              <AboutUs />
-            </Route>
-          </Switch>
-          <TableHome />
+            <Route exact path="/">
+            <TableHome />
           <Home />
           <CardsHome />
           <HomeBack />
           <ExchangeForm />
           <MyChart />
+            </Route>
+            <Route exact path="/aboutUs">
+              <AboutUs />
+            </Route>
+          </Switch>
+      
       
         </Router>
 
