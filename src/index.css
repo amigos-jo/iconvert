@@ -198,15 +198,12 @@ span {
   text-align: center;
 }
 .headerColor {
-<<<<<<< HEAD
 /* background-color: #f0ebcc; */
 /* background-color: whitesmoke; */
 background-color: white;
-=======
   /* background-color: #f0ebcc; */
   background-color: white;
   /* background-color: white; */
->>>>>>> 68d9d28bb59db377a7f4b77385fe5c11487e54c5
 }
 .navbar {
   height: 4.5rem;
