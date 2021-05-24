@@ -8,17 +8,22 @@ import MohammadAqel from '../assets/MohammadAqel.jpg';
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineFacebook } from "react-icons/ai";
+import Home from './Home';
 
 export class Test extends Component {
     render() {
         return (
             <div>
                 <div className="class my-5">
-                    <h2 >Our Team</h2>
+                    <h2 >iConvert website concept</h2>
                 </div>
-                <div className='justify-content-center'>
-                    <p className="paragraphEdit mt-4 ">
+                <div className='paragraphEditAboutUs'>
+                    <p className=" mt-4 ">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
+                        <hr/>
+                </div>
+                <div className="class mt-5 mb-1">
+                    <h2 >Our Team</h2>
                 </div>
 
                 <div id="cards_landscape_wrap-2">
@@ -166,7 +171,7 @@ export class Test extends Component {
                         </div>
                     </div>
                 </div>
-
+<Home/>
             </div >
 
 
