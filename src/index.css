@@ -239,7 +239,11 @@ background-color: white;
   font-family: 'Lato', sans-serif;
   font-size:  1.25rem;
   font-weight: bolder; 
+
+
 }
+
+
 
 .w-100 {
   width: 100% ;
@@ -292,6 +296,28 @@ color: #254288;
 .editDivPar{
   text-align: center;
 }
+ 
+ 
+.div-icons {
+text-align: center;
+
+}
+.div-icons a {
+  margin-bottom: 10px; 
+}
+.dim-footer {
+  padding-top: 0.05px;
+  margin-top: 40px;
+  background-color: #2855e7;
+  color: #f0ebcc;
+     
+}
+
+.hrdim {
+  margin: 1px auto;
+}
+ 
+ 
 .paragraphEditAboutUs{
   width: 60%;
   margin: 15px auto;
@@ -301,3 +327,4 @@ color: #254288;
   margin-top: 25px;
 color: rgb(121, 118, 129);
 }
+

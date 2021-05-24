@@ -62,7 +62,6 @@ export class Banner extends Component {
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
                         </Carousel.Caption>
 
-
                     </Carousel.Item>
                     <Carousel.Item interval={4500}>
                         <img
