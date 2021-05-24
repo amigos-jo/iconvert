@@ -9,9 +9,9 @@ function LogoutButton() {
   } = useAuth0();
 
   return isAuthenticated && (
-    <button onClick={() => {
+    <button className=" mx-3 btn btn-outline-danger  " onClick={() => {
       logout({ returnTo: window.location.origin });
-    }}>Log out</button>
+    }} >Log out</button>
   );
 }
 
