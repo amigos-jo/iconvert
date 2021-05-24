@@ -19,7 +19,7 @@ export default class Header extends Component {
             <Nav.Link className="item" href="#pricing">Contact us</Nav.Link>
 
           </Nav>
-          <button type="button" className="btn btn-outline-primary">Log in</button>
+          <button type="button" className="editButton btn btn-outline-primary ">Log in</button>
         </Navbar>
 
       </div>
