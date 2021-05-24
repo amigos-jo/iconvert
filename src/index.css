@@ -80,7 +80,7 @@ span {
   /* background: #F7F7F7; */
 }
 #cards_landscape_wrap-2 .container {
-  padding-top: 80px;
+  /* padding-top: 80px; */
   padding-bottom: 100px;
 }
 #cards_landscape_wrap-2 a {
@@ -251,7 +251,6 @@ background-color: white;
 }
 .logo {
   margin : 4.5rem 1.2rem 4rem 1.2rem;
- 
 }
 
 .items .item {
@@ -301,7 +300,6 @@ background-color: white;
 
  
 .w-100 {
-  /* FONT-VARIANT: JIS04; */
   width: 100% ;
   height: 28rem;
 }
@@ -354,7 +352,7 @@ transition-duration: 0.02s;
   position: sticky;
   top: 0;
   z-index: 99;
-  
+
 
 }
 .edit{
@@ -377,4 +375,7 @@ color: #254288;
 .paragraphEditAboutUs hr {
   margin-top: 25px;
 color: rgb(121, 118, 129);
+}
+.#cards_landscape_wrap-2 > div{
+  
 }
