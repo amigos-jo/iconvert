@@ -33,7 +33,8 @@ export class App extends Component {
       second: { value: 'EUR', type: 'EUR - Euro' },
       currAmount: 1,
       firstDate: '',
-      secondDate: ''
+      secondDate: '',
+      show:false
 
     }
 
@@ -167,7 +168,8 @@ export class App extends Component {
       }
 
       this.setState({
-        currencyHistory: historyArray.reverse()
+        currencyHistory: historyArray.reverse(),
+        show:true
       })
 
 console.log(this.state.currencyHistory);
@@ -273,7 +275,8 @@ console.log(this.state.currencyHistory);
                 toChange={this.toChange}
                 currAmount={this.state.currAmount}
                 changeAmount={this.changeAmount}
-                currencyHistory={this.state.currencyHistory} />
+                currencyHistory={this.state.currencyHistory}
+                show={this.state.show} />
               <TableHome />
               <Home />
               <CardsHome />

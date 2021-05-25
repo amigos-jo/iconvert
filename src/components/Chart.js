@@ -1,23 +1,23 @@
 import React from 'react'
 import { Chart } from 'react-charts'
 
-// console.log(this.props.element);
+// console.log(this.props.currencyHistory);
 
 
-function MyChart() {
+function MyChart(props) {
 
-
+  // console.log(this.props.currencyHistory);
   // if(this.props.currencyHistory.length>0){
-    // let finalArrayOfArrays = [];
-    // for (let i = 0; i <= 3; i++) {
-    //   for (let j = 0; j < historyArray.reverse()[i].length; j++) {
-    //     let myArray = [Object.keys[historyArray.reverse()[i][j]], Object.values[historyArray.reverse()[i][j]]]
-    //     finalArrayOfArrays.push(myArray);
-  
-    //   }
-  
-    // }
-   
+  // let finalArrayOfArrays = [];
+  // for (let i = 0; i <= 3; i++) {
+  //   for (let j = 0; j < historyArray.reverse()[i].length; j++) {
+  //     let myArray = [Object.keys[historyArray.reverse()[i][j]], Object.values[historyArray.reverse()[i][j]]]
+  //     finalArrayOfArrays.push(myArray);
+
+  //   }
+
+  // }
+
   // }
   const data = React.useMemo(
     () => [
