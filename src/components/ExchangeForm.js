@@ -12,69 +12,10 @@ let array1 = [
 ];
 
 export class ExchangeForm extends Component {
-    constructor(props) {
 
-        super(props);
-        this.state = {
-            btnActive: false,
-            first: { value: 'EUR', type: 'EUR - Euro' },
-            second: { value: 'EUR', type: 'EUR - Euro' }
-        }
-    }
-
-    changeButton = () => {
-        let firstVar = this.state.first;
-
-        this.setState({
-            btnActive: !this.state.btnActive,
-            first: this.state.second,
-            second: firstVar
-        })
-
-        console.log('First', this.state.first);
-
-        console.log('Second', this.state.second);
-
-    }
-    fromChange = (e) => {
-        let myValue = e.target.value;
-        let myType = '';
-        for (let i = 0; i < e.target.length; i++) {
-
-            if (e.target[i].value === myValue) {
-                myType = e.target[i].textContent;
-
-            }
-
-        }
-        this.setState({
-            first: { value: myValue, type: myType }
-        })
-        console.log('First', this.state.first);
-
-
-    }
-    toChange = (e) => {
-
-        let myValue = e.target.value;
-        let myType = '';
-        for (let i = 0; i < e.target.length; i++) {
-
-            if (e.target[i].value === myValue) {
-                myType = e.target[i].textContent;
-
-            }
-
-        }
-        this.setState({
-            second: { value: myValue, type: myType }
-        })
-        console.log('second', this.state.second);
-
-    }
-
-
+    
     render() {
+        console.log(this.props.currencyHistory);
         return (
             <div>
 
@@ -82,17 +23,17 @@ export class ExchangeForm extends Component {
                     <Row>
                         <Col>
                             <Form.Label className='lableForm'>Amount</Form.Label>
-                            <Form.Control type="number" min='1' placeholder="Amount" className='inputForm' />
+                            <Form.Control type="number" min='1' placeholder="Amount" className='inputForm' onChange={(e)=>this.props.changeAmount(e)}/>
                         </Col>
                         <Col>
                             <Form.Group className='test2' >
                                 <Form.Label className='lableForm'>From</Form.Label>
-                                <Form.Control as="select" className='inputForm' onChange={(e) => this.fromChange(e)}>
+                                <Form.Control as="select" className='inputForm' onChange={(e) => this.props.fromChange(e)}>
 
 
 
                                     {array1.map(element => {
-                                        if (this.state.first.value === element.value) {
+                                        if (this.props.first.value === element.value) {
                                            return <option selected value={element.value}>{element.type}</option>
                                         }
                                         else {
@@ -106,7 +47,7 @@ export class ExchangeForm extends Component {
                         </Col>
                         <Col>
                             <div className='editButtonForm'>
-                                <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
+                                <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.props.changeButton} className='edit' /></Button>
                             </div>
 
                         </Col>
@@ -114,10 +55,10 @@ export class ExchangeForm extends Component {
                         <Col>
                             <Form.Group className='test2' >
                                 <Form.Label className='lableForm'>To</Form.Label>
-                                <Form.Control as="select" className='inputForm' onChange={(e) => this.toChange(e)}>
+                                <Form.Control as="select" className='inputForm' onChange={(e) => this.props.toChange(e)}>
 
                                     {array1.map(element => {
-                                       if (this.state.second.value === element.value) {
+                                       if (this.props.second.value === element.value) {
                                         return  <option selected value={element.value}>{element.type}</option>
                                     }
                                     else {
@@ -132,7 +73,7 @@ export class ExchangeForm extends Component {
 
                     </Row>
                     <div className='pull-right'>
-                        <Button variant="outline-primary " className='btnForm rounded ' >Convert</Button>
+                        <Button variant="outline-primary " className='btnForm rounded' onClick={this.props.getData} >Convert</Button>
                     </div>
                 </Form>
 
