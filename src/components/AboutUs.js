@@ -9,18 +9,19 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineFacebook } from "react-icons/ai";
 import Home from './Home';
+import { FaFacebookF } from 'react-icons/fa';
 
 export class Test extends Component {
     render() {
         return (
-            <div>
+            <div className='icons-position1'>
                 <div className="class my-5">
                     <h2 >iConvert website concept</h2>
                 </div>
                 <div className='paragraphEditAboutUs'>
                     <p className=" mt-4 ">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
-                        <hr/>
+                    <hr />
                 </div>
                 <div className="class mt-5 mb-1">
                     <h2 >Our Team</h2>
@@ -43,8 +44,9 @@ export class Test extends Component {
                                             <br></br>
                                             <div>
                                                 <a href="https://github.com/amr88nzzal"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="/"><AiFillLinkedin size='1.7em' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' /></a>
+
                                             </div>
 
                                         </div>
@@ -67,8 +69,12 @@ export class Test extends Component {
                                             <br></br>
                                             <div>
                                                 <a href="https://github.com/DaniaAbughoush"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="https://www.linkedin.com/in/dania-abughoush/
+
+
+"><AiFillLinkedin size='1.7em' /></a>
+                                                <a href="https://www.facebook.com/dania.abugoush.14
+"><FaFacebookF size='1.46em' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -88,10 +94,10 @@ export class Test extends Component {
                                             <h1>Software developer</h1>
                                             <p >website designer | UI designer </p>
                                             <br></br>
-                                            <div>
+                                            <div className='icons-position1'>
                                                 <a href="https://github.com/DinaSami"><AiFillGithub size='1.7em' /></a>
                                                 <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -115,8 +121,8 @@ export class Test extends Component {
                                             <br></br>
                                             <div>
                                                 <a href="https://github.com/En-ZUH"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="https://www.linkedin.com/in/enas-bataineh/"><AiFillLinkedin size='1.7em' /></a>
+                                                <a href="https://github.com/En-ZUH"><FaFacebookF size='1.46em' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -138,7 +144,7 @@ export class Test extends Component {
                                             <div>
                                                 <a href="https://github.com/IbrahimAbuawad"><AiFillGithub size='1.7em' /></a>
                                                 <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -160,8 +166,8 @@ export class Test extends Component {
                                             <br></br>
                                             <div>
                                                 <a href="https://github.com/MohammadAqel"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="/"><AiFillLinkedin size='1.7em' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +177,7 @@ export class Test extends Component {
                         </div>
                     </div>
                 </div>
-<Home/>
+                <Home />
             </div >
 
 

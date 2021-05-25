@@ -14,30 +14,36 @@ import Logout from './Logout'
 class Header extends Component {
   render() {
     return (
-      <div className='headerEn justify-content-end'>
-        <Navbar className='headerColor  ' sticky="bottom" >
-          <img src={Logo} alt='logo' className='logo' />
-          <Navbar.Collapse className="justify-content-end p-5">
-          <Nav>
-              <Nav.Link className="item" href="/">Home</Nav.Link>
-              <Nav.Link className="item" href="/aboutUs">About us</Nav.Link>
-              <Nav.Link className="item" href='/' >Contact us</Nav.Link>
-              {this.props.auth0.isAuthenticated &&
-                <>
-                  <Nav.Link className="item" href='/profile' >Profile</Nav.Link>
-                  <Logout />
-                </>
-              }
-            </Nav>
-          </Navbar.Collapse>
-         
-            <Login />
-         
+      <div>
 
-        </Navbar>
+        <div className='headerEn justify-content-end'>
+          <Navbar className='headerColor  ' sticky="bottom" >
+            {/* <img src={Logo} alt='logo' className='logo' /> */}
+
+            <Nav.Link href="/"><img src={Logo} alt='logo' className='logo' /></Nav.Link>
+            <Navbar.Collapse className="justify-content-end p-5 container   pullRight ">
+              <Nav>
+                <Nav.Link className="item" href="/">Home</Nav.Link>
+                <Nav.Link className="item" href="/aboutUs">About us</Nav.Link>
+                <Nav.Link className="item" href='/' >Contact us</Nav.Link>
+                {this.props.auth0.isAuthenticated &&
+                  <>
+                    <Nav.Link className="item" href='/profile' >Profile</Nav.Link>
+                    <Logout />
+                  </>
+                }
+              </Nav>
+            </Navbar.Collapse>
+
+            <Login />
+
+
+          </Navbar>
+
+        </div>
 
       </div>
-    )
+    );
   }
 }
 

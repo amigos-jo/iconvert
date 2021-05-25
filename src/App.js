@@ -1,11 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import TableHome from './components/TableHome'
 import Header from './components/Header';
 import Banner from './components/Banner';
- 
+
 import Footer from './components/Footer';
 
- 
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './components/Home';
 import AboutUs, { Test } from './components/AboutUs'
@@ -32,14 +33,14 @@ export class App extends Component {
           <Banner className='bannerEn ' />
           <Switch>
             <Route exact path="/">
-            <CardContainer />
-             <TableHome />
-            <Home />
-            <CardsHome/> 
+              <CardContainer />
+              <TableHome />
+              <Home />
+              <CardsHome />
             </Route>
 
             <Route exact path="/aboutUs">
-              <AboutUs /> 
+              <AboutUs />
             </Route>
           </Switch>
 
@@ -52,4 +53,4 @@ export class App extends Component {
   }
 }
 
-export default  withAuth0(App);
+export default withAuth0(App);

@@ -82,7 +82,7 @@ export class ExchangeForm extends Component {
                     <Row>
                         <Col>
                             <Form.Label className='lableForm'>Amount</Form.Label>
-                            <Form.Control type="number" min='1' placeholder="Amount" className='inputForm' />
+                            <Form.Control type="number" min='1' placeholder="Amount" className='inputForm  ' />
                         </Col>
                         <Col>
                             <Form.Group className='test2' >
@@ -93,7 +93,7 @@ export class ExchangeForm extends Component {
 
                                     {array1.map(element => {
                                         if (this.state.first.value === element.value) {
-                                           return <option selected value={element.value}>{element.type}</option>
+                                            return <option selected value={element.value}>{element.type}</option>
                                         }
                                         else {
                                             return (
@@ -113,18 +113,18 @@ export class ExchangeForm extends Component {
 
                         <Col>
                             <Form.Group className='test2' >
-                                <Form.Label className='lableForm'>To</Form.Label>
-                                <Form.Control as="select" className='inputForm' onChange={(e) => this.toChange(e)}>
+                                <Form.Label className='lableForm inputTO'>To</Form.Label>
+                                <Form.Control as="select" className='inputForm  inputTO ' onChange={(e) => this.toChange(e)}>
 
                                     {array1.map(element => {
-                                       if (this.state.second.value === element.value) {
-                                        return  <option selected value={element.value}>{element.type}</option>
-                                    }
-                                    else {
-                                        return (
-                                            <option value={element.value}>{element.type}</option>
-                                        )
-                                    }
+                                        if (this.state.second.value === element.value) {
+                                            return <option selected value={element.value}>{element.type}</option>
+                                        }
+                                        else {
+                                            return (
+                                                <option value={element.value}>{element.type}</option>
+                                            )
+                                        }
                                     })}
                                 </Form.Control>
                             </Form.Group>
