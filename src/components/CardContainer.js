@@ -5,13 +5,36 @@ import { Card, CardBody, Row } from 'reactstrap';
 
 
 export class CardContainer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          currenywallah: this.props.currencyHistory
+    
+    
+        }
+    
+    
+      }
     render() {
+        const x = this.props.currencyHistory;
+        console.log(this.props.currencyHistory, x);
         return (
             <div>
                 <Card className="shadow m-5">
                     <CardBody className="py-5">
-                        <ExchangeForm />
-                        <Chart />
+                        <ExchangeForm
+                            first={this.props.first}
+                            second={this.props.second}
+                            getData={this.props.getData}
+                            changeButton={this.props.changeButton}
+                            fromChange={this.props.fromChange}
+                            toChange={this.props.toChange}
+                            currAmount={this.props.currAmount}
+                            changeAmount={this.props.changeAmount} />
+                        {this.props.currencyHistory.length &&
+                            <Chart
+                                currencyHistory={this.state.currenywallah} />
+                        }
                     </CardBody>
                 </Card>
             </div>
