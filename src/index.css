@@ -165,6 +165,7 @@ span {
 .convForm {
   border: 1px solid rgba(0, 0, 0, 0.253);
   margin: 50px auto;
+  /* background-color: rgba(255, 0, 0, 0.021); */
 }
 
 .btnForm {
@@ -308,7 +309,7 @@ text-align: center;
 .dim-footer {
   padding-top: 0.05px;
   margin-top: 40px;
-  background-color: #254288;
+  background-color: #162b5d;
   color: #f0ebcc;
      
 }
@@ -327,4 +328,29 @@ text-align: center;
   margin-top: 25px;
 color: rgb(121, 118, 129);
 }
-
+.newButton{
+    margin-top: 35px;
+    height: 50px;
+}
+.rounded {
+border-radius: 50%;
+}
+.newEdit{
+    text-align: center;
+}
+.editImage{
+  border: rgba(36, 33, 240, 0.404) 1px solid;
+  /* display: block; */
+  /* border-radius: 50%; */
+   /* width: 10px; 
+  height: 90px;  */
+  /* text-align: center; */
+  /* margin-top: 30px; */
+  /* margin-right: 0px; */
+  /* margin-left: 25px; */
+}
+.editDivaInfo {
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  margin: 50px auto;
+  /* background-color: rgba(255, 0, 0, 0.021); */
+}
