@@ -6,9 +6,10 @@ import axios from 'axios';
 import Footer from './components/Footer';
 
 
+import AboutUs from './components/AboutUs';
+import Profile from './components/profile/Profile';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './components/Home';
-import AboutUs, { Test } from './components/AboutUs'
 import CardsHome from './components/CardsHome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -18,7 +19,7 @@ import {
 } from "react-router-dom";
 import CardContainer from './components/CardContainer';
 import { withAuth0 } from '@auth0/auth0-react';
-import { logBase } from '@syncfusion/ej2-charts';
+
 
 
 
@@ -258,7 +259,7 @@ console.log(this.state.currencyHistory);
 
 
   render() {
-    // console.log('app', this.props.auth0.isAuthenticated);
+    console.log('app', this.props.auth0);
     return (
       <div>
         <Router>
@@ -281,14 +282,16 @@ console.log(this.state.currencyHistory);
               <Home />
               <CardsHome />
             </Route>
-
             <Route exact path="/aboutUs">
               <AboutUs />
             </Route>
+            <Route exact path="/profile">
+              {this.props.auth0.isAuthenticated &&
+               <Profile /> 
+              }
+            </Route>
           </Switch>
-
           <Footer />
-
         </Router>
 
       </div>
