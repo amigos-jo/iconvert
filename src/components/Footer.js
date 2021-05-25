@@ -25,7 +25,7 @@ export default class Footer extends Component {
                                             <FaFacebookF size='1.5rem' />
                                         </a >
 
-                                        <a href="/" className="me-4 text-reset footer-icon-position ">
+                                        <a href="/" className="me-4 text-reset footer-icon-position   ">
                                             <GrInstagram size='1.5rem' />
                                         </a>
 

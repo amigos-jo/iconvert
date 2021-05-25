@@ -11,7 +11,7 @@ function LogoutButton() {
   return isAuthenticated && (
 
 
-    <Button variant="outline-warning" className=" mx-3 btn btn-outline-warning1 " onClick={() => {
+    <Button variant="outline-primary" className=" mx-3 btn btn-outline-primary1 " onClick={() => {
       logout({ returnTo: window.location.origin });
     }} >Logout</Button>
   );

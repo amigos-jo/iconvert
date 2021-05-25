@@ -173,6 +173,7 @@ span {
    border-radius: 5px;
    background-color: hsla(216, 98%, 52%, 0.151);
   margin: 50px auto;
+  /* background-color: rgba(255, 0, 0, 0.021); */
 }
 
 .btnForm {
@@ -235,7 +236,7 @@ background-color: white;
 .navbar {
   height: 4.5rem;
   width: 100%;
-  position: relative;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -246,7 +247,7 @@ background-color: white;
   margin-bottom: 0rem;
 }
 .fixed {
-  position: fixed;
+  position: fixed !important;
   top: 0;
 }
 
@@ -807,19 +808,18 @@ div.highlightTextIn a:before
 
 /*____________________________________________________________*/
 
-.btn-outline-warning1  {
+.btn-outline-primary1  {
   color: #344fa1 !important  ;
-  background-color: #f0ebcc !important ;
-  border-color: #df8961  !important;
+  
   font-weight: bold !important;
   border: 3px solid !important;
 }
  
 
-.btn-outline-warning1:hover  {
-  color: #000;
-  background-color: #c27f60d5 !important;
-  border-color:#c27f60d5 !important;
+.btn-outline-primary1:hover  {
+    color: white !important;
+    background-color: #344fa1d5 !important;
+    border-radius: 10px  !important;
 }
 
 
@@ -842,5 +842,61 @@ color: white;
 .icons-position1 a {
   display: inline-block !important;
  
-  margin: 0px !important;
+  margin: 0px !important;}
+.newButton{
+    margin-top: 35px;
+    height: 50px;
 }
+.rounded {
+border-radius: 50%;
+}
+.newEdit{
+    text-align: center;
+}
+.editImage{
+  border: rgba(36, 33, 240, 0.404) 1px solid;
+  /* display: block; */
+  /* border-radius: 50%; */
+   /* width: 10px; 
+  height: 90px;  */
+  /* text-align: center; */
+  /* margin-top: 30px; */
+  /* margin-right: 0px; */
+  /* margin-left: 25px; */
+}
+.editDivaInfo {
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  margin: 50px auto;
+  /* background-color: rgba(255, 0, 0, 0.021); */
+}
+
+.userInfo p  {
+  color:#21094ed3 !important;
+font-weight: bolder !important;
+font-size: 20px !important ;
+}
+
+.cardColor1 {
+  background-color: hsla(216, 98%, 52%, 0.151) !important;border: 1px solid #0d6efd;
+}
+
+.userInfo h6, h3  {
+  color:#21094ed3 !important;
+ 
+}
+
+.newButton1 {
+  margin-top: 4rem;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  border:solid 2px !important ;
+}
+ 
+
+.deleteProp {
+  background-color: rgba(255, 0, 0, 0.747) !important;
+  color: white !important;
+  font-weight: bold  !important;
+}
+
+ 

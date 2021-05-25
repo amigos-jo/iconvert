@@ -16,8 +16,8 @@ class Header extends Component {
     return (
       <div>
 
-        <div className='headerEn justify-content-end'>
-          <Navbar className='headerColor  ' sticky="bottom" >
+        <div className='headerEn justify-content-end  '>
+          <Navbar className='headerColor fixed' sticky="bottom" >
             {/* <img src={Logo} alt='logo' className='logo' /> */}
 
             <Nav.Link href="/"><img src={Logo} alt='logo' className='logo' /></Nav.Link>

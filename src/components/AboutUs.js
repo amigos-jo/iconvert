@@ -7,7 +7,7 @@ import Ibrahim from '../assets/Ibrahim.jpg';
 import MohammadAqel from '../assets/MohammadAqel.jpg';
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
-import { AiOutlineFacebook } from "react-icons/ai";
+// import { AiOutlineFacebook } from "react-icons/ai";
 import Home from './Home';
 import { FaFacebookF } from 'react-icons/fa';
 
@@ -43,9 +43,9 @@ export class Test extends Component {
                                             <p >website designer | UI designer </p>
                                             <br></br>
                                             <div>
-                                                <a href="https://github.com/amr88nzzal"><AiFillGithub size='1.7em' /></a>
-                                                <a href="/"><AiFillLinkedin size='1.7em' /></a>
-                                                <a href="/"><FaFacebookF size='1.46em' /></a>
+                                                <a href="https://github.com/amr88nzzal"><AiFillGithub size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><AiFillLinkedin size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' color='#3d84b8' /></a>
 
                                             </div>
 
@@ -68,13 +68,13 @@ export class Test extends Component {
                                             <p >website designer | UI designer </p>
                                             <br></br>
                                             <div>
-                                                <a href="https://github.com/DaniaAbughoush"><AiFillGithub size='1.7em' /></a>
+                                                <a href="https://github.com/DaniaAbughoush"><AiFillGithub size='1.7em' color='#3d84b8' /></a>
                                                 <a href="https://www.linkedin.com/in/dania-abughoush/
 
 
-"><AiFillLinkedin size='1.7em' /></a>
+"><AiFillLinkedin size='1.7em' color='#3d84b8' /></a>
                                                 <a href="https://www.facebook.com/dania.abugoush.14
-"><FaFacebookF size='1.46em' /></a>
+"><FaFacebookF size='1.46em' color='#3d84b8' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -95,9 +95,9 @@ export class Test extends Component {
                                             <p >website designer | UI designer </p>
                                             <br></br>
                                             <div className='icons-position1'>
-                                                <a href="https://github.com/DinaSami"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href="/"><FaFacebookF size='1.46em' /></a>
+                                                <a href="https://github.com/DinaSami"><AiFillGithub size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><AiFillLinkedin size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' color='#3d84b8' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -120,9 +120,9 @@ export class Test extends Component {
                                             <p >website designer | UI designer </p>
                                             <br></br>
                                             <div>
-                                                <a href="https://github.com/En-ZUH"><AiFillGithub size='1.7em' /></a>
-                                                <a href="https://www.linkedin.com/in/enas-bataineh/"><AiFillLinkedin size='1.7em' /></a>
-                                                <a href="https://github.com/En-ZUH"><FaFacebookF size='1.46em' /></a>
+                                                <a href="https://github.com/En-ZUH"><AiFillGithub size='1.7em' color='#3d84b8' /></a>
+                                                <a href="https://www.linkedin.com/in/enas-bataineh/"><AiFillLinkedin size='1.7em' color='#3d84b8' /></a>
+                                                <a href="https://github.com/En-ZUH"><FaFacebookF size='1.46em' color='#3d84b8' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -142,9 +142,9 @@ export class Test extends Component {
                                             <p >website designer | UI designer </p>
                                             <br></br>
                                             <div>
-                                                <a href="https://github.com/IbrahimAbuawad"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href="/"><FaFacebookF size='1.46em' /></a>
+                                                <a href="https://github.com/IbrahimAbuawad"><AiFillGithub size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><AiFillLinkedin size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' color='#3d84b8' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -165,9 +165,9 @@ export class Test extends Component {
                                             <p >website designer | UI designer </p>
                                             <br></br>
                                             <div>
-                                                <a href="https://github.com/MohammadAqel"><AiFillGithub size='1.7em' /></a>
-                                                <a href="/"><AiFillLinkedin size='1.7em' /></a>
-                                                <a href="/"><FaFacebookF size='1.46em' /></a>
+                                                <a href="https://github.com/MohammadAqel"><AiFillGithub size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><AiFillLinkedin size='1.7em' color='#3d84b8' /></a>
+                                                <a href="/"><FaFacebookF size='1.46em' color='#3d84b8' /></a>
                                             </div>
                                         </div>
                                     </div>
