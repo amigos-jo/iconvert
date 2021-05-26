@@ -6,10 +6,10 @@ export class TableProfile extends Component {
     render() {
         return (
             <>
-               <div className="class my-3">
+                <div className="class my-3">
                     <h2 >Live Currency Rates</h2>
                 </div>
-                <Table  className=' css w-75 ' responsive="sm" hover >
+                <Table className=' css w-75 ' responsive="sm" hover >
                     <thead  >
                         <tr className='border-secondary'>
                             <th></th>
@@ -21,26 +21,26 @@ export class TableProfile extends Component {
                     </thead>
                     <tbody>
 
-                        <tr>
-                            <td ><Button variant="outline-danger" className="mt-4 px-5 shadow">X</Button></td>
-                            <td ><Button variant="outline-primary" className="mt-4 px-5 shadow">Update</Button></td>
-                            <td className="text-primary">EUR / USD</td>
-                            <td className="text-secondary">1.21796</td>
-                            <td className="text-danger">▼</td>
+                        <tr >
+                            <td ><Button variant="outline-danger" className="shadow rounded-circle deleteProp">X</Button></td>
+                            <td ><Button variant="outline-primary" className=" px-5 shadow">Update</Button></td>
+                            <td className="text-primary   ">EUR / USD</td>
+                            <td className="text-secondary  ">1.21796</td>
+                            <td className="text-danger "> &nbsp; &nbsp; &nbsp;▼</td>
                         </tr>
                         <tr>
-                        <td ><Button variant="outline-danger" className="mt-4 px-5 shadow">X</Button></td>
-                            <td ><Button variant="outline-primary" className="mt-4 px-5 shadow">Update</Button></td>
+                            <td ><Button variant="outline-danger" className="   shadow rounded-circle deleteProp" >X</Button></td>
+                            <td ><Button variant="outline-primary" className="  px-5 shadow">Update</Button></td>
                             <td className="text-primary">GBP / EUR</td>
                             <td className="text-secondary">1.16187</td>
-                            <td className="text-success">▲</td>
+                            <td className="text-success">&nbsp; &nbsp; &nbsp;▲</td>
                         </tr>
                         <tr>
-                        <td ><Button variant="outline-danger" className="mt-4 px-5 shadow">X</Button></td>
-                            <td ><Button variant="outline-primary" className="mt-4 px-5 shadow">Update</Button></td>
+                            <td ><Button variant="outline-danger" className="   shadow rounded-circle deleteProp">X</Button></td>
+                            <td ><Button variant="outline-primary" className=" px-5 shadow">Update</Button></td>
                             <td className="text-primary">GBP / EUR</td>
                             <td className="text-secondary">1.16187</td>
-                            <td className="text-danger">▼</td>
+                            <td className="text-danger">&nbsp; &nbsp; &nbsp;▼</td>
                         </tr>
                     </tbody>
                 </Table>

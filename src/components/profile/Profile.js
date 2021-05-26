@@ -15,7 +15,7 @@ export class Profile extends Component {
                 <br></br>
                 <TableProfile />
                 <br></br>
-                <FormUdpate/>
+                <FormUdpate />
             </div>
         )
     }

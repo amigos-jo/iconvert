@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import TableHome from './components/TableHome'
 import Header from './components/Header';
@@ -267,6 +268,7 @@ console.log(this.state.currencyHistory);
           <Banner className='bannerEn ' />
           <Switch>
             <Route exact path="/">
+
               <CardContainer
                 first={this.state.first}
                 second={this.state.second}
@@ -278,6 +280,7 @@ console.log(this.state.currencyHistory);
                 changeAmount={this.changeAmount}
                 currencyHistory={this.state.currencyHistory}
                 show={this.state.show} />
+
               <TableHome />
               <Home />
               <CardsHome />
@@ -287,7 +290,7 @@ console.log(this.state.currencyHistory);
             </Route>
             <Route exact path="/profile">
               {this.props.auth0.isAuthenticated &&
-               <Profile /> 
+                <Profile />
               }
             </Route>
           </Switch>
