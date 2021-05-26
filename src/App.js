@@ -261,6 +261,7 @@ console.log(this.state.currencyHistory);
 
   render() {
     console.log('app', this.props.auth0);
+    console.log('from container',this.state.first);
     return (
       <div>
         <Router>
@@ -291,7 +292,18 @@ console.log(this.state.currencyHistory);
             <Route exact path="/profile">
 
               {this.props.auth0.isAuthenticated ?
-               <Profile userPass={this.props.auth0}/> :   <> <CardContainer />  <TableHome />  <Home /> <CardsHome/></>
+               <Profile userPass={this.props.auth0}/> :   <> 
+               <CardContainer
+                 first={this.state.first}
+                 second={this.state.second}
+                 getData={this.getData}
+                 changeButton={this.changeButton}
+                 fromChange={this.fromChange}
+                 toChange={this.toChange}
+                 currAmount={this.state.currAmount}
+                 changeAmount={this.changeAmount}
+                 currencyHistory={this.state.currencyHistory}
+                 show={this.state.show} />  <TableHome />  <Home /> <CardsHome/></>
 
               }
             </Route>

@@ -60,15 +60,15 @@ export class Profile extends Component {
     // for adding coins in profile page
     addCoin = async (e) => {
         e.preventDefault();
-
+        
         const bodyData = {
-            currency1: this.state.currency2,
-            currency2: this.state.currency2,
-            email: this.props.auth0.user.email
+            fCoin: this.state.currency1,
+            sCoin: this.state.currency2,
+            email: this.props.userPass.user.email
         }
-        const newCoinAdded = await axios.post(`${process.env.REACT_APP_SERVER_URL}/user`, bodyData);
+        const newCoinAdded = await axios.post(`http://localhost:8090/user`, bodyData);
 
-        this.setState({ array: newCoinAdded.data })
+        this.setState({ arrayData: newCoinAdded.data })
     }
 
     updateCurrency1 = (e) => this.setState({ currency1: e.target.value });
