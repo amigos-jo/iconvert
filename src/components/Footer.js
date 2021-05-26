@@ -9,7 +9,7 @@ export default class Footer extends Component {
     render() {
         return (
 
-            <div>
+            <div id='idFooter'>
                 <footer class="text-center text-lg-start  dim-footer footer-height'  ">
 
                     <section class="">

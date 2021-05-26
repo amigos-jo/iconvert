@@ -61,6 +61,7 @@ span {
   font-weight: bolder;
   padding-right: 30px;
   font-size: 25px;
+  display: none;
 }
 #cards_landscape_wrap-2 {
   text-align: center;
@@ -240,11 +241,7 @@ background-color: white;
   font-family: 'Lato', sans-serif;
   font-size:  1.25rem;
   font-weight: bolder; 
-
-
 }
-
-
 
 .w-100 {
   width: 100% ;
@@ -253,12 +250,13 @@ background-color: white;
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-  display: inline-block;
+  /* display: inline-block; */
   width: 35px ;
+  display: none;
 }
 
 .carousel-indicators li {
-  box-sizing: content-box;
+  box-sizing:content-box;
   flex: 0 1 auto;
   width: 9px ;
   height: 8px ;

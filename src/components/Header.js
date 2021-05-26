@@ -21,7 +21,7 @@ class Header extends Component {
           <Nav>
               <Nav.Link className="item" href="/">Home</Nav.Link>
               <Nav.Link className="item" href="/aboutUs">About us</Nav.Link>
-              <Nav.Link className="item" href='/' >Contact us</Nav.Link>
+              <Nav.Link className="item" href='#idFooter'  >Contact us</Nav.Link>
               {this.props.auth0.isAuthenticated &&
                 <>
                   <Nav.Link className="item" href='/profile' >Profile</Nav.Link>
