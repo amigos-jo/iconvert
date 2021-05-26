@@ -41,7 +41,7 @@ export class CardsHome extends Component {
                                                     <Button
                                                         className="editContent mt-4 px-5 shadow "
                                                         color="outline-primary"
-                                                        href="#"
+                                                        href="#convertDiv"
 
                                                     > Try it !</Button>
 
@@ -61,7 +61,7 @@ export class CardsHome extends Component {
                                                     <Button
                                                         className=" mt-4 px-5 shadow"
                                                         color="outline-primary"
-                                                        href="#"
+                                                        href="#convertDiv"
                                                     > View it !</Button>
                                                 </div>
                                             </CardBody>

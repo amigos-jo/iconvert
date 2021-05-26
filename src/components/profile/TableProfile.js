@@ -7,6 +7,21 @@ export class TableProfile extends Component {
     coinName: [],
     coinArray: [],
   }
+
+  deletePair = async (index) => {
+    const newArrayOfCoin = this.state.coinArray.filter((element, indEl) => {
+      return indEl !== index;
+    })
+   
+
+    const deletedData = {
+      email: this.props.userPass.user.email
+    }
+    await axios.delete(`http://localhost:8090/user/${index}`, { params: deletedData });
+    this.setState({ coinArray: newArrayOfCoin })
+  
+  }
+
   componentDidMount = async () => {
     try {
       const mappingArray = this.props.array1
@@ -61,8 +76,9 @@ export class TableProfile extends Component {
               this.state.coinArray.map((element, ind) => {
                 return <>
                   < tr>
-                    <td ><Button variant="outline-danger" className="shadow rounded-circle deleteProp">X</Button></td>
-                    <td ><Button variant="outline-primary" className=" px-5 shadow">Update</Button></td>
+                    <td ><Button variant="outline-danger" className="shadow rounded-circle deleteProp" onClick={()=> {this.deletePair(ind)} }>X</Button></td>
+                    {/* <td ><Button variant="outline-primary" className=" px-5 shadow">Update</Button></td> */}
+                    <td className="text-danger">&nbsp; &nbsp; &nbsp; </td>
                     <td className="text-primary">{this.state.coinName[ind]}</td>
                     <td className="text-secondary">{element}</td>
                     <td className="text-danger">&nbsp; &nbsp; &nbsp; ▼</td>

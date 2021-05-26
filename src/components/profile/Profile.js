@@ -12,27 +12,14 @@ export class Profile extends Component {
         this.state = {
             currency1: '',
             currency2: '',
-            arrayData: []
+            arrayData: [],
+            reload: false
         }
     }
 
 
     // ========= //
-    // for updating dataBase related to user email
-    updateCoin = async (e) => {
-        e.preventDefault();
 
-        const bodyData = {
-            fromCoin: this.state.currency1,
-            toCoin: this.state.currency2,
-            emailA: this.props.auth0.user.email
-        }
-        const updateBook = await axios.put(`${process.env.REACT_APP_SERVER_URL}/book/${this.state.index}`, bodyData);
-
-        this.setState({ book12: updateBook.data })
-    }
-
-    // ========= //
   
 
     // ========= //
@@ -55,26 +42,17 @@ export class Profile extends Component {
     }
 
 
-    
+ 
     // ========= //
-    // for adding coins in profile page
-    addCoin = async (e) => {
-        e.preventDefault();
-        
-        const bodyData = {
-            fCoin: this.state.currency1,
-            sCoin: this.state.currency2,
-            email: this.props.userPass.user.email
-        }
-        const newCoinAdded = await axios.post(`http://localhost:8090/user`, bodyData);
-
-        this.setState({ arrayData: newCoinAdded.data })
-    }
+ 
+   
 
     updateCurrency1 = (e) => this.setState({ currency1: e.target.value });
     updateCurrency2 = (e) => this.setState({ currency2: e.target.value });
     // ========= //
 
+    
+    
     render() {
         console.log('from profile state', this.state.arrayData);
         // console.log('propfile', this.props.userPass.user.email);
@@ -84,19 +62,23 @@ export class Profile extends Component {
                 <PersonalInfo />
                 <br></br>
                 <FormFavoriteProfile
-                    addCoin={this.addCoin}
-                    updateCurrency1={this.updateCurrency1}
-                    updateCurrency2={this.updateCurrency2}
+                    // addCoin={this.addCoin}
+                    // updateCurrency1={this.updateCurrency1}
+                    // updateCurrency2={this.updateCurrency2}
+                    userPass={this.props.userPass}
                 />
                 <br></br>
-                {this.state.arrayData.length && 
+                {this.state.arrayData.length &&
+                 
                      <TableProfile
                      array1={this.state.arrayData}
+                     userPass={this.props.userPass}
+                     
                  />
                 }
            
                 <br></br>
-                <FormUdpate />
+                {/* <FormUdpate /> */}
             </div>
         )
     }

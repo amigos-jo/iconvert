@@ -11,7 +11,7 @@ import Logout from './Logout'
 class Header extends Component {
   render() {
     return (
-      <div>
+      <div >
         <div className='headerEn justify-content-end  '>
           <Navbar className='headerColor fixed' sticky="bottom" >
             {/* <img src={Logo} alt='logo' className='logo' /> */}
