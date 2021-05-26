@@ -8,24 +8,27 @@ import { AiFillGithub } from 'react-icons/ai';
 export default class Footer extends Component {
     render() {
         return (
+            <div className='my-footer-color  '  >
+                <div  >
 
             <div id='idFooter'>
                 <footer class="text-center text-lg-start  dim-footer footer-height'  ">
 
-                    <section class="">
-                        <div class="container text-center text-md-start mt-5">
-                            <div class="row mt-3 ">
-                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 div-icons footer-height">
 
-                                    <h6 class="mb-4  ">
-                                        <i class="fas fa-gem me-3 "></i>Get connected with us on social networks:
+                    <section className='my-footer-color  ' >
+                        <div className=" text-center text-md-start mt-5"  >
+                            <div className="row mt-3 ">
+                                <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 div-icons  ">
+
+                                    <h6 className="mb-4 my-footer text-footer ">
+                                        <i className="fas fa-gem me-3  "></i>Get connected with us on social networks:
           </h6>
                                     <p>
                                         <a href="/" className="me-4 text-reset footer-icon-position ">
                                             <FaFacebookF size='1.5rem' />
                                         </a >
 
-                                        <a href="/" className="me-4 text-reset footer-icon-position ">
+                                        <a href="/" className="me-4 text-reset footer-icon-position   ">
                                             <GrInstagram size='1.5rem' />
                                         </a>
 
@@ -40,17 +43,17 @@ export default class Footer extends Component {
                                     </p >
                                 </div >
 
-                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4  ">
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4  " >
 
-                                    <h6 class=" mb-4">
-                                        Contact
+                                    <h6 class=" mb-4 text-footer  ">
+                                        Contact:
           </h6>
-                                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                                    <p><i className="fas fa-home     "></i> New York, NY 10012, US</p>
                                     <p>
-                                        <i class="fas fa-envelope me-3"></i>
-            Convert@gmail.com
+                                        <i class="fas fa-envelope   "></i>
+            iConvert@ltuc.com
           </p>
-                                    <p><i class="fas fa-phone me-3"></i> + 00962 795554444</p>
+                                    {/* <p><i class="fas fa-phone me-3"></i> + 00962 795554444</p> */}
 
                                 </div>
 
@@ -61,15 +64,15 @@ export default class Footer extends Component {
 
 
 
-                    <div class="text-center p-4 footer-height"  >
+                    <div class="text-center p-4  my-footer-color "  >
                         <hr width={'50%'} className='hrdim' />
                         © 2021 iConverTeam
                      </div>
 
-                </footer >
 
+
+                </div >
             </div >
-
         );
     }
 }

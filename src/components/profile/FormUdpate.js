@@ -75,20 +75,20 @@ export class FormUdpate extends Component {
     render() {
         return (
             <div>
-     
-                 <Form className=' p-4 w-75 convForm'>
-                 <div className="class mb-5 mt-2">
-                    <h2 >Update current currency </h2>
-                </div>
-                    <Row>
+
+                <Form className=' p-4 w-75 convForm'>
+                    <div className="class  mt-2">
+                        <h2 >Update current currency </h2>
+                    </div>
+                    <Row className=" px-4 mb-4  ">
                         <Col>
                             <Form.Group className='test2' >
                                 <Form.Label className='lableForm'>From</Form.Label>
                                 <Form.Control as="select" className='inputForm' onChange={(e) => this.fromChange(e)}>
-                                    
-                                {array1.map(element => {
+
+                                    {array1.map(element => {
                                         if (this.state.first.value === element.value) {
-                                           return <option selected value={element.value}>{element.type}</option>
+                                            return <option selected value={element.value}>{element.type}</option>
                                         }
                                         else {
                                             return (
@@ -99,34 +99,34 @@ export class FormUdpate extends Component {
                                 </Form.Control>
                             </Form.Group>
                         </Col>
-                        
+
                         <Col>
                             <div className='editButtonForm'>
-                                <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
+                                <Button className='test rounded-circle mx-5' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
                             </div>
 
                         </Col>
 
                         <Col>
                             <Form.Group className='test2' >
-                                <Form.Label className='lableForm'>To</Form.Label>
+                                <Form.Label className='lableForm inputTO2'>To</Form.Label>
                                 <Form.Control as="select" className='inputForm' onChange={(e) => this.toChange(e)} >
-                                    
-                                {array1.map(element => {
-                                       if (this.state.second.value === element.value) {
-                                        return  <option selected value={element.value}>{element.type}</option>
-                                    }
-                                    else {
-                                        return (
-                                            <option value={element.value}>{element.type}</option>
-                                        )
-                                    }
+
+                                    {array1.map(element => {
+                                        if (this.state.second.value === element.value) {
+                                            return <option selected value={element.value}>{element.type}</option>
+                                        }
+                                        else {
+                                            return (
+                                                <option value={element.value}>{element.type}</option>
+                                            )
+                                        }
                                     })}
                                 </Form.Control>
                             </Form.Group>
                         </Col>
                         <Col className='pull-right'>
-                        <Button variant="outline-primary " className='newButton '  >Update</Button>
+                            <Button variant="outline-primary " className='newButton newButton1'  >Update</Button>
                         </Col>
                     </Row>
                 </Form>

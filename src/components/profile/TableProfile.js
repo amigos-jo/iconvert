@@ -59,6 +59,7 @@ export class TableProfile extends Component {
                             <th>Change</th>
                         </tr>
                     </thead>
+
                     <tbody >
                         {this.state.coinArray.length &&
                             this.state.coinArray.map((element,ind) => {
@@ -73,6 +74,7 @@ export class TableProfile extends Component {
                                 </>
                             })
                         }
+
                     </tbody>
                 </Table>
             </>

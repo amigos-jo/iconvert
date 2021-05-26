@@ -14,6 +14,7 @@ import Logout from './Logout'
 class Header extends Component {
   render() {
     return (
+<div>
       <div className='headerEn justify-content-end'>
         <Navbar className='headerColor  ' sticky="bottom" >
           <img src={Logo} alt='logo' className='logo' />
@@ -30,14 +31,16 @@ class Header extends Component {
               }
             </Nav>
           </Navbar.Collapse>
-         
+   
             <Login />
-         
 
-        </Navbar>
+
+          </Navbar>
+
+        </div>
 
       </div>
-    )
+    );
   }
 }
 
