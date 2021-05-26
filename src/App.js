@@ -289,8 +289,10 @@ console.log(this.state.currencyHistory);
               <AboutUs />
             </Route>
             <Route exact path="/profile">
-              {this.props.auth0.isAuthenticated &&
-                <Profile />
+
+              {this.props.auth0.isAuthenticated ?
+               <Profile userPass={this.props.auth0}/> :   <> <CardContainer />  <TableHome />  <Home /> <CardsHome/></>
+
               }
             </Route>
           </Switch>

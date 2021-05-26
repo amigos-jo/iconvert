@@ -23,7 +23,7 @@ function MyChart(props) {
     () => [
       {
         label: 'Series 1',
-        data: [[0, 1], [1, 2], [2, 4], [3, 2], [4, 7]]
+        data: [[0, 1.410463], [1, 1.410359], [2, 1.410359], [3, 1.41039], [4, 1.410394],[5,1.410459],[6,1.410392],[7,1.410475],[8,1.410359]]
       },
 
     ],
@@ -43,9 +43,11 @@ function MyChart(props) {
     // space of its parent element automatically
     <div
       style={{
+
         width: '80%',
         height: '300px',
         margin: '20px auto'
+
       }}
     >
       <Chart data={data} axes={axes} />

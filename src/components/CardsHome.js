@@ -7,7 +7,7 @@ import {
     Row,
     Col
 } from "reactstrap";
-import { RiSendPlaneFill } from "react-icons/ri";
+import { GiChart } from "react-icons/gi";
 import { RiExchangeDollarFill } from "react-icons/ri";
 import { HiOutlineCurrencyPound } from "react-icons/hi";
 
@@ -29,17 +29,17 @@ export class CardsHome extends Component {
                                     <Col lg="4">
                                         <Card className="shadow">
                                             <CardBody className="py-5">
-                                                <RiSendPlaneFill size='4em' color='#2B2ACE ' />
-                                                <h5 className="cardh6 text-uppercase"> Title</h5>
+                                                <GiChart size='4em' color='#2B2ACE ' />
+                                                <h5 className="cardh6 text-uppercase"> Convert</h5>
 
                                                 <p className="paragraphEdit mt-4">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
+                                                   in this website we provide convert tool</p>
                                                     <div className='buttonEdit'>
                                                     <Button
                                                         className="mt-4 px-5 shadow"
                                                         color="outline-primary"
                                                         href="#"
-                                                    > click</Button>
+                                                    > try convert!</Button>
                                                 </div>
                                             </CardBody>
                                         </Card>

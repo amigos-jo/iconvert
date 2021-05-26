@@ -11,6 +11,9 @@ export default class Footer extends Component {
             <div className='my-footer-color  '  >
                 <div  >
 
+            <div id='idFooter'>
+                <footer class="text-center text-lg-start  dim-footer footer-height'  ">
+
 
                     <section className='my-footer-color  ' >
                         <div className=" text-center text-md-start mt-5"  >
