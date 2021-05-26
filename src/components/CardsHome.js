@@ -7,9 +7,10 @@ import {
     Row,
     Col
 } from "reactstrap";
-import { GiChart } from "react-icons/gi";
-import { RiExchangeDollarFill } from "react-icons/ri";
-import { HiOutlineCurrencyPound } from "react-icons/hi";
+
+import { SiConvertio } from "react-icons/si";
+import { FaChartLine } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
 
 
 
@@ -18,7 +19,7 @@ export class CardsHome extends Component {
         return (
             <>
                 <div className="class my-5">
-                    <h2 >The world's most popular currency tools</h2>
+                    <h4>The advantages of the iconvert in terms of the principle of work and the way to use the user for this site</h4>
                 </div>
 
                 <section className="section section-lg pt-lg-0 mt--200">
@@ -29,17 +30,21 @@ export class CardsHome extends Component {
                                     <Col lg="4">
                                         <Card className="shadow">
                                             <CardBody className="py-5">
-                                                <GiChart size='4em' color='#2B2ACE ' />
-                                                <h5 className="cardh6 text-uppercase"> Convert</h5>
+
+                                                <SiConvertio size='4em' color='#2B2ACE ' />
+                                                <h5 className="cardh6 text-uppercase">Convert</h5>
 
                                                 <p className="paragraphEdit mt-4">
-                                                   in this website we provide convert tool</p>
-                                                    <div className='buttonEdit'>
+                                                    This site enables the user to convert currencies and compare them to other currencies in terms of prices and how to convert them.   </p>
+                                                <div className='buttonEdit'>
+
                                                     <Button
-                                                        className="mt-4 px-5 shadow"
+                                                        className="editContent mt-4 px-5 shadow "
                                                         color="outline-primary"
                                                         href="#"
-                                                    > try convert!</Button>
+
+                                                    > Try it !</Button>
+
                                                 </div>
                                             </CardBody>
                                         </Card>
@@ -48,16 +53,16 @@ export class CardsHome extends Component {
                                     <Col lg="4">
                                         <Card className="card-lift--hover shadow ">
                                             <CardBody className="py-5">
-                                            <RiExchangeDollarFill size='4em' color='#2B2ACE ' />
-                                                <h5 className="cardh6"> Title</h5>
+                                                <FaChartLine size='4em' color='#2B2ACE ' />
+                                                <h5 className="cardh6  text-uppercase">Chart</h5>
                                                 <p className=" paragraphEdit description mt-4">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
-                                                    <div className='buttonEdit'>
+                                                    Also, you can see a graph of currencies and the rise or fall of their prices compared to the currencies over the past 30 days.   </p>
+                                                <div className='buttonEdit'>
                                                     <Button
-                                                        className="mt-4 px-5 shadow"
+                                                        className=" mt-4 px-5 shadow"
                                                         color="outline-primary"
                                                         href="#"
-                                                    > click</Button>
+                                                    > View it !</Button>
                                                 </div>
                                             </CardBody>
                                         </Card>
@@ -66,16 +71,16 @@ export class CardsHome extends Component {
                                     <Col lg="4">
                                         <Card className="card-lift--hover shadow border-2">
                                             <CardBody className="py-5">
-                                            <HiOutlineCurrencyPound size='4em' color='#2B2ACE ' />
-                                                <h5 className="cardh6 text-uppercase"> Title</h5>
-                                                <p  className=" paragraphEdit description mt-4">
-                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
+                                                <ImProfile size='4em' color='#2B2ACE ' />
+                                                <h5 className="cardh6 text-uppercase">profile</h5>
+                                                <p className=" paragraphEdit description mt-4">
+                                                    The user can also log in to the site and create its own page to add preferred currencies and their prices, store and retrieve them.   </p>
                                                 <div className='buttonEdit '>
                                                     <Button
                                                         className="mt-4 px-5 shadow"
                                                         color="outline-primary"
                                                         href="#"
-                                                    > click</Button>
+                                                    > Login now !</Button>
                                                 </div>
 
                                             </CardBody>
