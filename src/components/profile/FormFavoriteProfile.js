@@ -3,7 +3,8 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { AiOutlineSwap } from 'react-icons/ai'
+import { AiOutlineSwap } from 'react-icons/ai';
+import axios from 'axios';
 
 let array1 = [
     { value: 'EUR', type: 'EUR - Euro' },
@@ -72,6 +73,20 @@ export class FormFavoriteProfile extends Component {
         console.log('second', this.state.second);
 
     }
+    addCoin = async (e) => {
+        e.preventDefault();
+        
+        const bodyData = {
+            fCoin: this.state.first.value,
+            sCoin: this.state.second.value,
+            email: this.props.userPass.user.email
+        }
+        console.log('bodyData',bodyData);
+        const newCoinAdded = await axios.post(`http://localhost:8090/user`, bodyData);
+        console.log('newCoinAdded',newCoinAdded.data);
+
+        this.setState({ arrayData: newCoinAdded.data })
+    }
     render() {
         return (
             <div>
@@ -125,7 +140,7 @@ export class FormFavoriteProfile extends Component {
                             </Form.Group>
                         </Col>
                         <Col className='newEdit  '>
-                            <Button variant="outline-primary " className='newButton newButton1' onClick={(e)=> this.props.addCoin(e)}>Add </Button>
+                            <Button variant="outline-primary " className='newButton newButton1' onClick={(e)=> this.addCoin(e)}>Add </Button>
                         </Col>
                     </Row>
                 </Form>
