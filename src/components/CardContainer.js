@@ -7,12 +7,12 @@ import { Card, CardBody, Row } from 'reactstrap';
 export class CardContainer extends Component {
    
     render() {
-       
+       console.log('from container????',this.props.first);
         return (
             <div>
                 <Card className="shadow m-5">
                     <CardBody className="py-5">
-                        <ExchangeForm
+                        {<ExchangeForm
                             first={this.props.first}
                             second={this.props.second}
                             getData={this.props.getData}
@@ -20,7 +20,7 @@ export class CardContainer extends Component {
                             fromChange={this.props.fromChange}
                             toChange={this.props.toChange}
                             currAmount={this.props.currAmount}
-                            changeAmount={this.props.changeAmount} />
+                            changeAmount={this.props.changeAmount} /> }
                         {this.props.show &&
                             <Chart
                                 currencyHistory={this.props.currencyHistory} />

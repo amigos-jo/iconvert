@@ -125,7 +125,7 @@ export class FormFavoriteProfile extends Component {
                             </Form.Group>
                         </Col>
                         <Col className='newEdit  '>
-                            <Button variant="outline-primary " className='newButton newButton1' >Add </Button>
+                            <Button variant="outline-primary " className='newButton newButton1' onClick={(e)=> this.props.addCoin(e)}>Add </Button>
                         </Col>
                     </Row>
                 </Form>
