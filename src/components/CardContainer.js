@@ -8,6 +8,8 @@ export class CardContainer extends Component {
    
     render() {
        console.log('from container????',this.props.first);
+       console.log('from card',this.props.currencyHistory);
+
         return (
             <div>
                 <Card className="shadow m-5">
