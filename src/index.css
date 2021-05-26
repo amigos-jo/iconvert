@@ -907,3 +907,12 @@ font-size: 20px !important ;
 
 }
  
+.convResult{
+  margin-left: 12%;
+  color: rgba(0, 0, 0, 0.685);
+}
+
+.notVisi{
+  display: inline;
+  font-size: 25px;
+}

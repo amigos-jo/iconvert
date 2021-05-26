@@ -4,7 +4,6 @@ import { Chart } from 'react-charts'
 
 
 function MyChart(props) {
-  console.log('from chart', props.currencyHistory);
 
   let finalArray = [];
   let x = 0
@@ -19,7 +18,6 @@ function MyChart(props) {
 
 
 
-  console.log(finalArray);
 
   const data = React.useMemo(
     () => [
@@ -56,6 +54,7 @@ function MyChart(props) {
     </div>
   )
   return lineChart;
+
 }
 
 export default MyChart;
