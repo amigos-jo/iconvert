@@ -8,23 +8,23 @@ export class Home extends Component {
     render() {
         return (
             <div className='divHome'>
-                <h4 id='h4Edit'>Xe Currency Data API</h4>
+                <h2 id='h4Edit'>IConvert</h2>
                 <br></br>
-                <h5>Powering commercial grade rates at 300+ companies worldwide</h5>
+                <h5>Below you can see all of the things about the team that did the work and their creativity at doing it</h5>
                 <br></br>
-                <FaShopify size='3em' color='#fff' mt-5 />
-                <span>Shopify</span>
-                <MdContentCopy size='3em' color='#fff' mt-5 />
-                <span>Clear Books</span>
-                <SiXero size='3em' color='#fff' />
-                <span>Vistaprint</span>
+                {/* <FaShopify size='3em' color='#fff' mt-5 /> */}
+                <span>Success</span>
+                {/* <MdContentCopy size='3em' color='#fff' mt-5 /> */}
+                <span>Creative</span>
+                {/* <SiXero size='3em' color='#fff' /> */}
+                <span>Business</span>
                 <br></br>
                 <br></br>
                 <Button
                     className="mt-4 px-5 shadow" id='jakar'
                     color="outline-primary"
                     href="#"
-                > click</Button>
+                > Read More</Button>
             </div>
         )
     }

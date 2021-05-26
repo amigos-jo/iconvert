@@ -19,8 +19,10 @@ export class Test extends Component {
                 </div>
                 <div className='paragraphEditAboutUs'>
                     <p className=" mt-4 ">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.   </p>
-                        <hr/>
+                        This site was created by students who are beginners in the world of programming, so let us give them all thanks and support for these wonderful efforts.
+                        who are we ?
+                        Since the beginning of this course, we have been trying hard to highlight our strongest skills and strengths to take advantage of them and invest them in things that serve a large segment in society, and this is what we have reached.   </p>
+                    <hr />
                 </div>
                 <div className="class mt-5 mb-1">
                     <h2 >Our Team</h2>
@@ -160,8 +162,8 @@ export class Test extends Component {
                                             <br></br>
                                             <div>
                                                 <a href="https://github.com/MohammadAqel"><AiFillGithub size='1.7em' /></a>
-                                                <a href=""><AiFillLinkedin size='1.7em' /></a>
-                                                <a href=""><AiOutlineFacebook size='1.7em' /></a>
+                                                <a href="https://www.linkedin.com/in/mohammad-aqel-614b85195/"><AiFillLinkedin size='1.7em' /></a>
+                                                <a href="https://web.facebook.com/profile.php?id=100002760086128"><AiOutlineFacebook size='1.7em' /></a>
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +173,7 @@ export class Test extends Component {
                         </div>
                     </div>
                 </div>
-<Home/>
+                <Home />
             </div >
 
 
