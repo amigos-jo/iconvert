@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import A from '../assets/1.jpg';
-import B from '../assets/2.jpg';
-import C from '../assets/3.jpg';
-import D from '../assets/4.jpg';
-import E from '../assets/5.jpg';
-import F from '../assets/6.jpg';
+import A from '../assets/BannerImg/1.jpg';
+import D from '../assets/BannerImg/4.jpg';
+import F from '../assets/BannerImg/6.jpg';
+import G from '../assets/BannerImg/7.jpg';
+import H from '../assets/BannerImg/8.jpg';
+import I from '../assets/BannerImg/9.jpg';
+import L from '../assets/BannerImg/12.jpg';
+import M from '../assets/BannerImg/13.jpg';
+import N from '../assets/BannerImg/14.jpg';
+import P from '../assets/BannerImg/16.jpg';
 
 
 export class Banner extends Component {
@@ -22,34 +26,10 @@ export class Banner extends Component {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            {/* <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={4500}>
-                        <img
-                            className="d-block w-100"
-                            src={B}
-                            alt="Second slide"
-                        />
 
-                        <Carousel.Caption>
-                            {/* <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item interval={4500}>
-                        <img
-                            className="d-block w-100"
-                            src={C}
-                            alt="Third slide"
-                        />
 
-                        <Carousel.Caption>
-                            {/* <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-                        </Carousel.Caption>
-                    </Carousel.Item>
                     <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
@@ -58,25 +38,11 @@ export class Banner extends Component {
                         />
 
                         <Carousel.Caption>
-                            {/* <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+
                         </Carousel.Caption>
 
                     </Carousel.Item>
-                    <Carousel.Item interval={4500}>
-                        <img
-                            className="d-block w-100"
-                            src={E}
-                            alt="Third slide"
-                        />
 
-                        <Carousel.Caption>
-                            {/* <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-                        </Carousel.Caption>
-
-
-                    </Carousel.Item>
                     <Carousel.Item interval={4500}>
                         <img
                             className="d-block w-100"
@@ -85,8 +51,101 @@ export class Banner extends Component {
                         />
 
                         <Carousel.Caption>
-                            {/* <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={G}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={H}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={I}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={L}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={M}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={N}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
+                        </Carousel.Caption>
+
+
+                    </Carousel.Item>
+
+                    <Carousel.Item interval={4500}>
+                        <img
+                            className="d-block w-100"
+                            src={P}
+                            alt="Third slide"
+                        />
+
+                        <Carousel.Caption>
+
                         </Carousel.Caption>
 
 

@@ -7,6 +7,7 @@ import {
     Row,
     Col
 } from "reactstrap";
+
 import { SiConvertio } from "react-icons/si";
 import { FaChartLine } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
@@ -29,17 +30,21 @@ export class CardsHome extends Component {
                                     <Col lg="4">
                                         <Card className="shadow">
                                             <CardBody className="py-5">
+
                                                 <SiConvertio size='4em' color='#2B2ACE ' />
                                                 <h5 className="cardh6 text-uppercase">Convert</h5>
 
                                                 <p className="paragraphEdit mt-4">
                                                     This site enables the user to convert currencies and compare them to other currencies in terms of prices and how to convert them.   </p>
                                                 <div className='buttonEdit'>
+
                                                     <Button
                                                         className="editContent mt-4 px-5 shadow "
                                                         color="outline-primary"
                                                         href="#"
+
                                                     > Try it !</Button>
+
                                                 </div>
                                             </CardBody>
                                         </Card>

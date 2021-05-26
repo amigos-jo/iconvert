@@ -76,14 +76,14 @@ export class FormFavoriteProfile extends Component {
         return (
             <div>
                 <Form className='p-4 w-75 convForm pb-5 '>
-                <div className="class mb-5 mt-2">
-                    <h2 >Add to my favorite</h2>
-                </div>
-                    <Row>
+                    <div className="class  mt-2 ">
+                        <h2 >Add to my favorite</h2>
+                    </div>
+                    <Row className=" px-4   ">
                         <Col>
                             <Form.Group className='test2' >
-                                <Form.Label className='lableForm'>From</Form.Label>
-                                <Form.Control as="select" className='inputForm' onChange={(e) => this.fromChange(e)}>
+                                <Form.Label className='lableForm  '>From</Form.Label>
+                                <Form.Control as="select" className='inputForm ' onChange={(e) => this.fromChange(e)}>
 
                                     {array1.map(element => {
                                         if (this.state.first.value === element.value) {
@@ -101,15 +101,15 @@ export class FormFavoriteProfile extends Component {
 
                         <Col>
                             <div className='editButtonForm'>
-                                <Button className='test rounded-circle' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
+                                <Button className='test rounded-circle mx-5' ><AiOutlineSwap size='1.5em' onClick={this.changeButton} className='edit' /></Button>
                             </div>
 
                         </Col>
 
                         <Col>
-                            <Form.Group className='test2' >
-                                <Form.Label className='lableForm'>To</Form.Label>
-                                <Form.Control as="select" className='inputForm' onChange={(e) => this.toChange(e)} >
+                            <Form.Group className='test2 ' >
+                                <Form.Label className='lableForm inputTO2'>To</Form.Label>
+                                <Form.Control as="select" className='inputForm inputTO2' onChange={(e) => this.toChange(e)} >
 
                                     {array1.map(element => {
                                         if (this.state.second.value === element.value) {
@@ -124,8 +124,8 @@ export class FormFavoriteProfile extends Component {
                                 </Form.Control>
                             </Form.Group>
                         </Col>
-                        <Col className='newEdit'>
-                            <Button variant="outline-primary " className='newButton'  >Add </Button>
+                        <Col className='newEdit  '>
+                            <Button variant="outline-primary " className='newButton newButton1' >Add </Button>
                         </Col>
                     </Row>
                 </Form>
