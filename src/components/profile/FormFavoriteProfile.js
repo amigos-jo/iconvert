@@ -19,7 +19,8 @@ export class FormFavoriteProfile extends Component {
         this.state = {
             btnActive: false,
             first: { value: 'EUR', type: 'EUR - Euro' },
-            second: { value: 'EUR', type: 'EUR - Euro' }
+            second: { value: 'EUR', type: 'EUR - Euro' },
+            arrayAdii:[]
         }
     }
 
@@ -85,7 +86,7 @@ export class FormFavoriteProfile extends Component {
         const newCoinAdded = await axios.post(`http://localhost:8090/user`, bodyData);
         console.log('newCoinAdded',newCoinAdded.data);
 
-        this.setState({ arrayData: newCoinAdded.data })
+        this.setState({ arrayAdii: newCoinAdded.data })
     }
     render() {
         return (
@@ -96,7 +97,7 @@ export class FormFavoriteProfile extends Component {
                     </div>
                     <Row className=" px-4   ">
                         <Col>
-                            <Form.Group className='test2' >
+                            <Form.Group className='test2'  onSubmit={(e) => this.props.addBook(e)}>
                                 <Form.Label className='lableForm  '>From</Form.Label>
                                 <Form.Control as="select" className='inputForm ' onChange={(e) => this.fromChange(e)}>
 
