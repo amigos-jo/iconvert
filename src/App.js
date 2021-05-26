@@ -174,6 +174,8 @@ export class App extends Component {
         show:true
       })
 
+
+     
 console.log(this.state.currencyHistory);
    
 
