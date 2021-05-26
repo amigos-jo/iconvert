@@ -31,12 +31,12 @@ export class App extends Component {
     this.state = {
       currency: [],
       currencyHistory: [],
-      first: { value: 'EUR', type: 'EUR - Euro' },
-      second: { value: 'EUR', type: 'EUR - Euro' },
+      first: { value: 'AFN', type: 'AFN - Afghanistan' },
+      second: { value: 'AFN', type: 'AFN - Afghanistan' },
       currAmount: 1,
       firstDate: '',
       secondDate: '',
-      show:false
+      show: false
 
     }
 
@@ -56,15 +56,12 @@ export class App extends Component {
     })
 
 
-    console.log('First', this.state.first);
-
-    console.log('Second', this.state.second);
+  
 
   }
 
 
   fromChange = (e) => {
-    console.log(this.state.first.value);
 
     let myValue = e.target.value;
     let myType = '';
@@ -79,12 +76,10 @@ export class App extends Component {
     this.setState({
       first: { value: myValue, type: myType }
     })
-    console.log('First', this.state.first);
 
 
   }
   toChange = (e) => {
-    console.log(this.state.second.value);
     let myValue = e.target.value;
     let myType = '';
     for (let i = 0; i < e.target.length; i++) {
@@ -98,7 +93,6 @@ export class App extends Component {
     this.setState({
       second: { value: myValue, type: myType }
     })
-    console.log('second', this.state.second);
 
   }
 
@@ -109,7 +103,6 @@ export class App extends Component {
     const bodyData = `${this.state.first.value}/${this.state.second.value}/${this.state.currAmount}`;
     const bodyDataForChart = `${this.state.first.value}_${this.state.second.value}`;
 
-    console.log(bodyData);
     try {
       e.preventDefault();
 
@@ -123,6 +116,8 @@ export class App extends Component {
         currency: req.data
       })
 
+
+      console.log(this.state.currency);
       // .................................................................................................
       let historyArray = [];
       let dateArray = [];
@@ -162,7 +157,7 @@ export class App extends Component {
             secondDate: dateArray[i]
           })
 
-          const currencyChartAPI = `https://free.currconv.com/api/v7/convert?q=${bodyDataForChart}&compact=ultra&date=${this.state.secondDate}&endDate=${this.state.firstDate}&apiKey=8f01d570bb9926d1a349`
+          const currencyChartAPI = `https://free.currconv.com/api/v7/convert?q=${bodyDataForChart}&compact=ultra&date=${this.state.secondDate}&endDate=${this.state.firstDate}&apiKey=3e618c8042b520feded6`
           const req2 = await axios.get(currencyChartAPI);
           historyArray.push(req2.data[bodyDataForChart])
 
@@ -171,18 +166,16 @@ export class App extends Component {
 
       this.setState({
         currencyHistory: historyArray.reverse(),
-        show:true
+        show: true
       })
 
 
-     
-console.log(this.state.currencyHistory);
-   
+
+
 
 
     }
     catch (err) {
-      console.log(err);
     }
   }
 
@@ -262,8 +255,7 @@ console.log(this.state.currencyHistory);
 
 
   render() {
-    console.log('app', this.props.auth0);
-    console.log('from container',this.state.first);
+  
     return (
       <div>
         <Router>
@@ -282,7 +274,9 @@ console.log(this.state.currencyHistory);
                 currAmount={this.state.currAmount}
                 changeAmount={this.changeAmount}
                 currencyHistory={this.state.currencyHistory}
-                show={this.state.show} />
+                show={this.state.show} 
+                currency={this.state.currency}/>
+                
 
               <TableHome />
               <Home />
@@ -294,18 +288,19 @@ console.log(this.state.currencyHistory);
             <Route exact path="/profile">
 
               {this.props.auth0.isAuthenticated ?
-               <Profile userPass={this.props.auth0}/> :   <> 
-               <CardContainer
-                 first={this.state.first}
-                 second={this.state.second}
-                 getData={this.getData}
-                 changeButton={this.changeButton}
-                 fromChange={this.fromChange}
-                 toChange={this.toChange}
-                 currAmount={this.state.currAmount}
-                 changeAmount={this.changeAmount}
-                 currencyHistory={this.state.currencyHistory}
-                 show={this.state.show} />  <TableHome />  <Home /> <CardsHome/></>
+                <Profile userPass={this.props.auth0} /> : <>
+                  <CardContainer
+                    first={this.state.first}
+                    second={this.state.second}
+                    getData={this.getData}
+                    changeButton={this.changeButton}
+                    fromChange={this.fromChange}
+                    toChange={this.toChange}
+                    currAmount={this.state.currAmount}
+                    changeAmount={this.changeAmount}
+                    currencyHistory={this.state.currencyHistory}
+                    show={this.state.show}
+                    currency={this.state.currency} />  <TableHome />  <Home /> <CardsHome /></>
 
               }
             </Route>

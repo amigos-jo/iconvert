@@ -3,17 +3,17 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { AiOutlineSwap } from 'react-icons/ai'
+import { AiOutlineSwap } from 'react-icons/ai';
+import CurrencyJSONFile from '../assets/JSONFile/currencyFile';
 
-let array1 = [
-    { value: 'EUR', type: 'EUR - Euro' },
-    { value: 'USD', type: 'USD - Dollar' },
-    { value: 'JOD', type: 'JOD - Dinar' }
-];
+
+
+{/* <img src={`data:image/jpg;base64,${element.flag}`} alt="Red dot" /> */ }
+
 
 export class ExchangeForm extends Component {
 
-    
+
     render() {
         // console.log(this.props.currencyHistory);
         return (
@@ -22,8 +22,11 @@ export class ExchangeForm extends Component {
                 <Form className=' p-4 w-75 convForm'>
                     <Row>
                         <Col>
+
+
+
                             <Form.Label className='lableForm'>Amount</Form.Label>
-                            <Form.Control type="number" min='1' placeholder="Amount" className='inputForm' onChange={(e)=>this.props.changeAmount(e)}/>
+                            <Form.Control type="number" min='1' placeholder="Amount" className='inputForm' onChange={(e) => this.props.changeAmount(e)} />
                         </Col>
                         <Col>
                             <Form.Group className='test2' >
@@ -32,13 +35,16 @@ export class ExchangeForm extends Component {
 
 
 
-                                    {array1.map(element => {
-                                        if (this.props.first.value === element.value) {
-                                           return <option selected value={element.value}>{element.type}</option>
+                                    {CurrencyJSONFile.map(element => {
+                                        if (this.props.first.value === element.currency.code) {
+                                            return <option selected value={element.currency.code}>  {element.currency.code} - {element.name}</option>
                                         }
                                         else {
                                             return (
-                                                <option value={element.value}>{element.type}</option>
+                                                <>
+
+                                                    <option  value={element.currency.code}> {element.currency.code} - {element.name}</option>
+                                                </>
                                             )
                                         }
                                     })}
@@ -57,15 +63,15 @@ export class ExchangeForm extends Component {
                                 <Form.Label className='lableForm'>To</Form.Label>
                                 <Form.Control as="select" className='inputForm' onChange={(e) => this.props.toChange(e)}>
 
-                                    {array1.map(element => {
-                                       if (this.props.second.value === element.value) {
-                                        return  <option selected value={element.value}>{element.type}</option>
-                                    }
-                                    else {
-                                        return (
-                                            <option value={element.value}>{element.type}</option>
-                                        )
-                                    }
+                                    {CurrencyJSONFile.map(element => {
+                                        if (this.props.second.value === element.value) {
+                                            return <option selected value={element.currency.code}> {element.currency.code} - {element.name}</option>
+                                        }
+                                        else {
+                                            return (
+                                                <option value={element.currency.code}> {element.currency.code} - {element.name}</option>
+                                            )
+                                        }
                                     })}
                                 </Form.Control>
                             </Form.Group>

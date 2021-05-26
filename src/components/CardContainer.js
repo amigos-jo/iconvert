@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import ExchangeForm from './ExchangeForm';
 import Chart from './Chart';
 import { Card, CardBody, Row } from 'reactstrap';
+import ConvertResult from './ConvertResult';
 
 
 export class CardContainer extends Component {
-   
+
     render() {
-       console.log('from container????',this.props.first);
-       console.log('from card',this.props.currencyHistory);
+
 
         return (
             <div>
@@ -22,10 +22,18 @@ export class CardContainer extends Component {
                             fromChange={this.props.fromChange}
                             toChange={this.props.toChange}
                             currAmount={this.props.currAmount}
-                            changeAmount={this.props.changeAmount} /> }
+                            changeAmount={this.props.changeAmount} />}
                         {this.props.show &&
-                            <Chart
-                                currencyHistory={this.props.currencyHistory} />
+                            <>
+                                <ConvertResult 
+                                first={this.props.first}
+                                second={this.props.second}
+                                currAmount={this.props.currAmount}
+                                currency={this.props.currency}/>
+
+                                <Chart
+                                    currencyHistory={this.props.currencyHistory} />
+                            </>
                         }
                     </CardBody>
                 </Card>
