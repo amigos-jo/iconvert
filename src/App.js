@@ -56,7 +56,7 @@ export class App extends Component {
     })
 
 
-  
+
 
   }
 
@@ -107,8 +107,8 @@ export class App extends Component {
       e.preventDefault();
 
 
-
-      const currencyAPI = `https://v6.exchangerate-api.com/v6/3df40b6fce06792f5c05339c/pair/${bodyData}`;
+      let APIKey = process.env.REACT_APP_KEY;
+      const currencyAPI = `https://v6.exchangerate-api.com/v6/${APIKey}/pair/${bodyData}`;
 
 
       const req = await axios.get(currencyAPI);
@@ -156,8 +156,8 @@ export class App extends Component {
           this.setState({
             secondDate: dateArray[i]
           })
-
-          const currencyChartAPI = `https://free.currconv.com/api/v7/convert?q=${bodyDataForChart}&compact=ultra&date=${this.state.secondDate}&endDate=${this.state.firstDate}&apiKey=3e618c8042b520feded6`
+          let APIHistoryKey = process.env.REACT_APP_KEY_HISTORY;
+          const currencyChartAPI = `https://free.currconv.com/api/v7/convert?q=${bodyDataForChart}&compact=ultra&date=${this.state.secondDate}&endDate=${this.state.firstDate}&apiKey=${APIHistoryKey}`
           const req2 = await axios.get(currencyChartAPI);
           historyArray.push(req2.data[bodyDataForChart])
 
@@ -181,81 +181,10 @@ export class App extends Component {
 
 
 
-  componentDidMount = async () => {
-    // const { user } = this.props.auth0;
-
-    const API_URL = `${process.env.REACT_APP_HOST}/currency?`;
-    const getCurrenyAPI = await axios.get(API_URL);
-    this.setState({ currency: getCurrenyAPI.data });
-  }
-
-
-  updateFirstCurreny = (e) => this.setState({ firstCurrency: e.target.value });
-  updateSecondCurreny = (e) => this.setState({ secondCurrency: e.target.value });
-
-  addfavCurrency = async (e) => {
-    e.preventDefault();
-
-    const bodyData = `${this.state.firstCurrency}/${this.state.secondCurrency}`;
-
-    const newBook = await axios.post(`${process.env.REACT_APP_HOST}/currency/${bodyData}`,);
-
-    this.setState({
-      book: newBook.data
-    })
-  }
-
-  deleteBook = async (index) => {
-    const newArrayOfBooks = this.state.book.filter((val, idx) => {
-      return idx !== index;
-    });
-    this.setState({
-      book: newArrayOfBooks
-    })
-
-    const query = {
-      email: this.props.auth0.user.email
-    }
-    await axios.delete(`${process.env.REACT_APP_HOST}/books/${index}`, { params: query })
-  }
-
-
-  update = async (e) => {
-    e.preventDefault();
-    const reqBody = {
-      name: this.state.name,
-      status: this.state.status,
-      description: this.state.description,
-      email: this.props.auth0.user.email
-    }
-    const newBook = await axios.put(`${process.env.REACT_APP_HOST}/books/${this.state.index}`, reqBody); //put to update// send data to server
-
-    this.setState({
-      book: newBook.data
-    })
-
-  }
-
-  showUpdateForm = (idx) => {
-
-    const newBook = this.state.book.filter((value, index) => {
-      return idx === index;
-
-    });
-
-
-    this.setState({
-      index: idx,
-      name: newBook[0].name,
-      status: newBook[0].status,
-      description: newBook[0].description,
-      showUpdate: true
-    });
-  }
 
 
   render() {
-  
+
     return (
       <div>
         <Router>
@@ -274,9 +203,9 @@ export class App extends Component {
                 currAmount={this.state.currAmount}
                 changeAmount={this.changeAmount}
                 currencyHistory={this.state.currencyHistory}
-                show={this.state.show} 
-                currency={this.state.currency}/>
-                
+                show={this.state.show}
+                currency={this.state.currency} />
+
 
               <TableHome />
               <Home />

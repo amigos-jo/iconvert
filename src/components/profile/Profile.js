@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PersonalInfo from './PersonalInfo';
 import TableProfile from './TableProfile';
 import FormFavoriteProfile from './FormFavoriteProfile';
-import FormUdpate from './FormUdpate';
 import axios from 'axios';
 // import { withAuth0 } from '@auth0/auth0-react';
 
@@ -25,9 +24,11 @@ export class Profile extends Component {
     // ========= //
     // for reading dataBase related to user email
     componentDidMount = async () => {
+        let host = process.env.REACT_APP_HOST;
+
         try {
             const  tryEmail  = this.props.userPass.user.email;
-        const previousInfo = `http://localhost:8090/user?email=${tryEmail}`;
+        const previousInfo = `${host}/user?email=${tryEmail}`;
         const req = await axios.get(previousInfo);
         const reqData =  req.data;       
         console.log('from profile req.data', reqData);

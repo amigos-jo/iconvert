@@ -8,7 +8,6 @@ import CurrencyJSONFile from '../assets/JSONFile/currencyFile';
 
 
 
-{/* <img src={`data:image/jpg;base64,${element.flag}`} alt="Red dot" /> */ }
 
 
 export class ExchangeForm extends Component {

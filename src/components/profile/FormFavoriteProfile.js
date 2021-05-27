@@ -5,12 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { AiOutlineSwap } from 'react-icons/ai';
 import axios from 'axios';
+import CurrencyJSONFile from '../../assets/JSONFile/currencyFile';
 
-let array1 = [
-    { value: 'EUR', type: 'EUR - Euro' },
-    { value: 'USD', type: 'USD - Dollar' },
-    { value: 'JOD', type: 'JOD - Dinar' }
-];
+
 
 export class FormFavoriteProfile extends Component {
     constructor(props) {
@@ -33,9 +30,6 @@ export class FormFavoriteProfile extends Component {
             second: firstVar
         })
 
-        console.log('First', this.state.first);
-
-        console.log('Second', this.state.second);
 
     }
     fromChange = (e) => {
@@ -52,7 +46,6 @@ export class FormFavoriteProfile extends Component {
         this.setState({
             first: { value: myValue, type: myType }
         })
-        console.log('First', this.state.first);
 
 
     }
@@ -71,7 +64,6 @@ export class FormFavoriteProfile extends Component {
         this.setState({
             second: { value: myValue, type: myType }
         })
-        console.log('second', this.state.second);
 
     }
     addCoin = async (e) => {
@@ -82,9 +74,8 @@ export class FormFavoriteProfile extends Component {
             sCoin: this.state.second.value,
             email: this.props.userPass.user.email
         }
-        console.log('bodyData',bodyData);
-        const newCoinAdded = await axios.post(`http://localhost:8090/user`, bodyData);
-        console.log('newCoinAdded',newCoinAdded.data);
+       let host = process.env.REACT_APP_HOST;
+        const newCoinAdded = await axios.get(`${host}/addcoin?email=${bodyData.email}&fCoin=${bodyData.fCoin}&sCoin=${bodyData.sCoin}`);
 
         this.setState({ arrayAdii: newCoinAdded.data })
     }
@@ -101,13 +92,16 @@ export class FormFavoriteProfile extends Component {
                                 <Form.Label className='lableForm  '>From</Form.Label>
                                 <Form.Control as="select" className='inputForm ' onChange={(e) => this.fromChange(e)}>
 
-                                    {array1.map(element => {
-                                        if (this.state.first.value === element.value) {
-                                            return <option selected value={element.value}>{element.type}</option>
+                                {CurrencyJSONFile.map(element => {
+                                        if (this.state.first.value === element.currency.code) {
+                                            return <option selected value={element.currency.code}>  {element.currency.code} - {element.name}</option>
                                         }
                                         else {
                                             return (
-                                                <option value={element.value}>{element.type}</option>
+                                                <>
+
+                                                    <option  value={element.currency.code}> {element.currency.code} - {element.name}</option>
+                                                </>
                                             )
                                         }
                                     })}
@@ -127,13 +121,13 @@ export class FormFavoriteProfile extends Component {
                                 <Form.Label className='lableForm inputTO2'>To</Form.Label>
                                 <Form.Control as="select" className='inputForm inputTO2' onChange={(e) => this.toChange(e)} >
 
-                                    {array1.map(element => {
-                                        if (this.state.second.value === element.value) {
-                                            return <option selected value={element.value}>{element.type}</option>
+                                {CurrencyJSONFile.map(element => {
+                                        if (this.state.second.value === element.currency.code) {
+                                            return <option selected value={element.currency.code}> {element.currency.code} - {element.name}</option>
                                         }
                                         else {
                                             return (
-                                                <option value={element.value}>{element.type}</option>
+                                                <option value={element.currency.code}> {element.currency.code} - {element.name}</option>
                                             )
                                         }
                                     })}
@@ -151,4 +145,3 @@ export class FormFavoriteProfile extends Component {
 }
 
 export default FormFavoriteProfile
-

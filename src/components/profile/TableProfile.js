@@ -9,15 +9,17 @@ export class TableProfile extends Component {
   }
 
   deletePair = async (index) => {
+    let host = process.env.REACT_APP_HOST;
+
     const newArrayOfCoin = this.state.coinArray.filter((element, indEl) => {
       return indEl !== index;
     })
-   
+    
 
     const deletedData = {
       email: this.props.userPass.user.email
     }
-    await axios.delete(`http://localhost:8090/user/${index}`, { params: deletedData });
+    await axios.delete(`${host}/user/${index}`, { params: deletedData });
     this.setState({ coinArray: newArrayOfCoin })
   
   }
@@ -50,8 +52,10 @@ export class TableProfile extends Component {
     }
   }
   newTest = async (coins) => {
+    let host = process.env.REACT_APP_HOST;
+
     console.log('coins', coins);
-    const url = `http://localhost:8090/excoin?fromCoin=${coins[0]}&toCoin=${coins[1]}&amount=1`;
+    const url = `${host}/excoin?fromCoin=${coins[0]}&toCoin=${coins[1]}&amount=1`;
     const coinRate = await axios.get(url);
     return coinRate
   }
