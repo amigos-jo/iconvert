@@ -78,6 +78,7 @@ export class FormFavoriteProfile extends Component {
         const newCoinAdded = await axios.get(`${host}/addcoin?email=${bodyData.email}&fCoin=${bodyData.fCoin}&sCoin=${bodyData.sCoin}`);
 
         this.setState({ arrayAdii: newCoinAdded.data })
+        window.location.reload();
     }
     render() {
         return (
